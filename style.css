@@ -1,8 +1,3 @@
-/*-----------------------------------------------------------------------------------
-	    Tino Hacks
-        Built with Blocs
------------------------------------------------------------------------------------*/
-
 body{
 	margin:0;
 	padding:0;
@@ -395,36 +390,28 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Bloc image backgrounds */
 
-.bg-imageedit-1-2762075193{
-	background-image:url("img/imageedit_1_2762075193.png");
-}
-.bg-field{
-	background-image:url("img/field.jpg");
-}
-.bg-plain-white-background-211387{
-	background-image:url("img/plain_white_background_211387.jpg");
-}
 
 
 
-/* = Mobile adjustments 
+/* = Mobile adjustments
 -------------------------------------------------------------- */
 @media (max-width: 1024px)
 {
     .bloc{
-        padding-left: 20px; 
-        padding-right: 20px;  
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .bloc.full-width-bloc, .bloc-tile-2.full-width-bloc .container, .bloc-tile-3.full-width-bloc .container, .bloc-tile-4.full-width-bloc .container{
-        padding-left: 0; 
-        padding-right: 0;  
+        padding-left: 0;
+        padding-right: 0;
     }
 }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {.b-parallax{background-attachment:scroll;}}
 @media (max-width: 768px)
 {
     .container{width:100%;}
     .b-parallax{background-attachment:scroll;}
-    .page-container, #hero-bloc{overflow-x: hidden;position: relative;} /* Prevent unwanted side scroll on mobile */  
+    .page-container, #hero-bloc{overflow-x: hidden;position: relative;} /* Prevent unwanted side scroll on mobile */
 }
 @media (max-width: 767px)
 {
@@ -433,8 +420,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
         position:relative;
     }
     h1,h2,h3,h4,h5,h6,p{
-        padding-left:10px!important; 
-        padding-right:10px!important; 
+        padding-left:10px!important;
+        padding-right:10px!important;
     }
     #hero-bloc h1{
         font-size:40px;
@@ -446,8 +433,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
         font-size:25px;
     }
     .bloc{
-        padding-left: 0; 
-        padding-right: 0;  
+        padding-left: 0;
+        padding-right: 0;
         -webkit-background-size: auto 200%;
         -moz-background-size: auto 200%;
         -o-background-size: auto 200%;
@@ -470,7 +457,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   transform:none;
 	   -webkit-transform:none;
 	   -ms-transform:none;
-    }  
+    }
     .nav > li{
         margin-top: 0;
         border-bottom:1px solid rgba(0,0,0,.1);
@@ -482,7 +469,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     .nav > li:hover{
         background:rgba(0,0,0,.08);
     }
-    .dropdown .dropdown a .caret{   
+    .dropdown .dropdown a .caret{
         float: none;
         margin: 5px 0 0 10px!important;
         border: 4px solid black;
@@ -490,7 +477,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
         border-right-color: transparent;
         border-left-color: transparent;
     }
-    
+
     #hero-bloc .navbar .nav{
         background:rgba(0,0,0,.8);
     }
@@ -513,14 +500,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     .navbar-brand img{
         max-height: 40px;
         width:auto;
-        margin: -10px 10px 0 0;    
+        margin: -10px 10px 0 0;
     }
     .nav-invert .navbar-header{
         float: none;
         width:100%;
     }
     .nav-invert .navbar-toggle{
-        float:left; 
+        float:left;
     }
     .bloc-group .bloc{
          display:block;
@@ -534,14 +521,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
         padding: 40px 0;
     }
     .bloc-sm,.bloc-md{
-        padding-left: 0; 
+        padding-left: 0;
         padding-right: 0;
     }
     .a-block{
         padding:0 10px;
     }
     .btn-dwn{
-       display:none; 
+       display:none;
     }
     .voffset{
         margin-top:5px;
@@ -558,7 +545,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
     .close-lightbox{
         display:inline-block;
     }
- 
+
     .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -567,7 +554,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
         margin-top: 0;
         margin-bottom: 0;
     }
-    .video-bg-contianer{
+    .video-bg-container{
         display:none;
     }
     .blocsapp-device-iphone5{
@@ -590,4 +577,3 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	margin-top:0%;
 }
 }
-
