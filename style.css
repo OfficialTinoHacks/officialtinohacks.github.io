@@ -12,8 +12,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 
 #page-loading-blocs-notifaction{position: absolute;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;}
 
-/* = Blocs
--------------------------------------------------------------- */
 
 .bloc{
 	width:100%;
@@ -42,8 +40,6 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 }
 
 
-/* Light theme */
-
 .d-bloc .panel,.l-bloc{
 	color:rgba(0,0,0,.5);
 }
@@ -70,10 +66,47 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	border-color:rgba(0,0,0,.3);
 }
 
-/* Bloc text custom styling */
+/* Row Margin Offsets */
+
+.voffset{
+	margin-top:30px;
+}
 
 #bloc-1 h2{
 	font-size: 72px;
+}
+#bloc-2 h2{
+	font-size: 50px;
+}
+#bloc-2 h3{
+	font-size: 30px;
+}
+#bloc-2 h4{
+	font-size: 20px;
+}
+#bloc-3 h3{
+	font-size: 30px;
+}
+#bloc-3 h4{
+	font-size: 20px;
+}
+#bloc-4 h3{
+	font-size: 30px;
+}
+#bloc-4 h4{
+	font-size: 20px;
+}
+#bloc-5 h3{
+	font-size: 30px;
+}
+#bloc-5 h4{
+	font-size: 20px;
+}
+#bloc-6 h2{
+	font-size: 50px;
+}
+#bloc-6 h3{
+	font-size: 30px;
 }
 
 /* = NavBar
@@ -198,6 +231,10 @@ nav .caret{
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-md{
+	margin-top:10px;
+	margin-bottom:20px;
+}
 .mg-lg{
 	margin-top:10px;
 	margin-bottom:40px;
@@ -368,27 +405,30 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .blocs-green-button:hover{
 	background-color:#1aae91;
 }
+.blocs-mobile-signup-text{
+	font-size:33px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
 
 /* Background colour styles */
 
-.bgc-white{
-	background-color:#ffffff;
+.bgc-splashed-white{
+	background-color:#FDFCFF;
 }
 /* Text colour styles */
 
-.tc-outer-space{
-	color:#47454B!important;
-	!important}/* Button colour styles */
+.tc-black{
+	color:#000000!important;
+}
+/* Button colour styles */
 
-.wire-btn-outer-space{
-	color:#47454B!important;
-	border-color:#47454B!important;
+.wire-btn-black{
+	color:#000000!important;
+	border-color:#000000!important;
 }
 
-/* Bloc image backgrounds */
 
 
 
@@ -575,5 +615,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 @media (max-width: 420px){
 	.bloc-group-text-vc{
 	margin-top:0%;
+}
+.blocs-mobile-signup-text{
+	text-align:center;
 }
 }
