@@ -1,7 +1,26 @@
+/*****************************
+FONTS
+******************************/
+@font-face {
+  font-family: "lightHelvetica";
+  src: url(../resources/HelveticaNeue-UltraLight.ttf);
+}
+@font-face {
+  font-family: "thinHelvetica";
+  src: url(../resources/HelveticaNeue-Thin.ttf);
+}
+@font-face {
+  font-family: "boldHelvetica";
+  src: url(../resources/HelveticaNeue-Bold.ttf);
+}
+
+/*****************************
+ELEMENTS
+******************************/
 body, html {
   height: 100%;
   margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "thinHelvetica", sans-serif;
   font-weight: 200;
   font-size: 1em;
   color: #777;
@@ -12,6 +31,7 @@ body, html {
 body {
   overflow-x: hidden;
 }
+
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   background-attachment: fixed;
@@ -21,14 +41,21 @@ body {
 }
 .bgimg-1 {
   min-height: 100%;
+  z-index: 0;
 }
 .bgimg-2 {
   background-image: url("../img/background.jpg");
   min-height: 400px;
+  z-index: 0;
 }
 .bgimg-3 {
   min-height: 400px;
+  z-index: 0;
 }
+
+/*****************************
+HEADER
+******************************/
 .menuContainer {
   background-color: black;
   padding: 10px;
@@ -73,22 +100,6 @@ body {
   color: #000;
   border: 1px solid white;
 }
-.circle {
-  border-radius: 50%;
-}
-.iconContainer {
-  width: 200px;
-  height: 200px;
-  background-color: #000;
-  color: #FFF;
-  border: 1px solid #000;
-}
-
-.feature:hover {
-  background-color: #FFF;
-  color: black;
-  transition: background-color 0.4s ease;
-}
 
 .menu {
   behavior: url(PIE.htc);
@@ -131,10 +142,6 @@ a .scrollArrow {
     transform: rotate(-45deg) translate(0, 0);
   }
 }
-.teamPos {
-  font-size: 4vmin !important;
-  font-weight: 100 !important;
-}
 .caption {
   position: absolute;
   left: 0;
@@ -144,6 +151,40 @@ a .scrollArrow {
   text-align: center;
   color: #000;
 }
+
+/*****************************
+Q&A
+******************************/
+.circle {
+  border-radius: 50%;
+}
+.iconContainer {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #000;
+}
+.feature:hover {
+  background-color: #FFF;
+  color: black;
+  transition: background-color 0.4s ease;
+}
+
+/*****************************
+Team Members
+******************************/
+.teamPos {
+  font-size: 3.5vmin !important;
+  font-weight: 100 !important;
+  font-style: "lightHelvetica", sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #007fff;
+}
+
 .caption span.border {
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
@@ -151,13 +192,61 @@ a .scrollArrow {
   font-size: 25px;
   letter-spacing: 1px;
   font-weight: 100;
-  font-style: "Helvetica Neue";
+  font-style: "thinHelvetica", sans-serif;
   border-radius: 150px;
 }
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font: 2em "Helvetica Neue", sans-serif;
+  font: 4vmin "thinHelvetica", sans-serif;
   font-weight: 200;
   color: #000;
+}
+
+/*****************************
+Footer Elements
+******************************/
+.twitter {
+  height: 60px;
+  width: 60px;
+  background-color: #1AB4EF;
+  border-radius: 50%;
+  font-size: 22px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.twitter:hover {
+  background-color: #1590BF;
+  transition: background-color 0.3s ease;
+}
+.facebook:hover {
+  background-color: #324C85;
+  transition: background-color 0.3s ease;
+}
+.facebook {
+  height: 60px;
+  width: 60px;
+  background-color: #3B5898;
+  border-radius: 50%;
+  font-size: 22px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.instagram:hover {
+  background-color: #663528;
+  transition: background-color 0.3s ease;
+}
+.instagram {
+  height: 60px;
+  width: 60px;
+  background-color: #7F4232;
+  border-radius: 50%;
+  font-size: 22px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+.social-media i {
+  margin-top: 20px;
+  color: white;
 }

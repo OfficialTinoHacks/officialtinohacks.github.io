@@ -54,7 +54,7 @@
   <div id="large-header" style="z-index: 0;" class="large stars bgimg-1">
     <canvas class="demo-canvas"></canvas>
     <div class="twinkling"></div>
-    <div class="clouds"></div>
+    <div style="background: transparent url(img/bgimages/clouds5.png) repeat top center;" class="clouds"></div>
     <div class="menuContainer">
       <a><img class="menu" src="img/menu.svg" alt="button" /></a>
     </div>
@@ -119,7 +119,12 @@
     </div>
     <div class="row">
       <div class="col-md-4">
-
+        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature iconContainer"><i style="line-height: 100px;" class="fa fa-bus fa-lg" aria-hidden="true"></i></div><br/># of members per team?</h2>
+        <p data-wow-delay="0.1s" class="wow fadeIn text-center">You need at least 1 person per team and 4 people at most.</p>
+      </div>
+      <div class="col-md-4">
+        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature iconContainer"><i style="line-height: 100px;" class="fa fa-bus fa-lg" aria-hidden="true"></i></div><br/>Do I need to make a team?</h2>
+        <p data-wow-delay="0.1s" class="wow fadeIn text-center">You can make a team beforehand, or find one at the event through our team building session. Meeting and working with new people at TinoHacks can be one of the most fruitful experiences you can have!</p>
       </div>
       <div class="col-md-4">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature iconContainer"><i style="line-height: 100px;" class="fa fa-bus fa-lg" aria-hidden="true"></i></div><br/>Travel Imbursements?</h2>
@@ -128,132 +133,145 @@
     </div>
   </div>
 
-  <div style="position:relative;">
-    <div style="color:#FFF;background-color:#282E34;text-align:center;padding:50px 80px;text-align: center;">
-      <h1 style="color: white">Sponsors</h1>
-      <br/>
-      <div class="row">
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
+  <div style="z-index: 0;" class="stars bgimg-1">
+    <div style="z-index: 0;" class="twinkling"></div>
+    <div style="z-index: 0;" id="multipleClouds" style="background: transparent url('img/bgimages/clouds6.png') repeat top center" class="clouds"></div>
+  </div>
+
+
+  <div style="z-index: 0; color:#FFF;background-color:#282E34;text-align:center;padding:50px 80px;text-align: center;">
+    <h1 style="color: white">Sponsors</h1>
+    <br/>
+    <div style="z-index: 0" class="row">
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
       </div>
-      <br/>
-      <div class="row">
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
       </div>
-      <br/>
-      <div class="row">
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
-        <div class="col-md-4">
-          <img width="400" height="179" src="img/sponsors/microsoft.png" />
-        </div>
+      <div class="col-md-4">
+        <img style="z-index: 0;" class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+      <div class="col-md-4">
+        <img style="z-index: 0;" class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
+      </div>
+      <div class="col-md-4">
+        <img style="z-index: 0;" class="img-responsive" width="400" height="179" src="img/sponsors/microsoft.png" />
       </div>
     </div>
   </div>
 
+
   <div style="color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: text-center;">
     <h1>TinoHacks Team</h1>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px; background-image: url('img/team/Justine Qiu.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Justine Qiu</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">[Position]</blockquote>
+          <blockquote class="teamPos">Founder/Sponsorship Director</blockquote>
         </p>
       </div>
-      <div class="col-md-4">
-        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px; background-image: url('img/team/Sriharsha Guduguntla.png'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle">
-</div><br/>Sriharsha G.</h2>
+      <div class="col-md-3">
+        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px; background-image: url('img/team/Davin Clark.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle">
+</div><br/>Davin Clark</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center">
-          <blockquote class="teamPos">Webmaster</blockquote>
+          <blockquote class="teamPos">Founder/Outreach Director</blockquote>
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Kashyap Panda.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Kashyap Panda</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">Technology</blockquote>
+          <blockquote class="teamPos">Technology Director</blockquote>
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Sriharsha Guduguntla.png'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Sriharsha G.</h2>
+        <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
+          <blockquote class="teamPos">Technology Director</blockquote>
         </p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Davin Clark.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Davin Clark</h2>
-        <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">Outreach</blockquote>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Joycelin Liaw.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle">
-</div><br/>Joycelin Liaw</h2>
-        <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">Outreach</blockquote>
-        </p>
-      </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Shruthi Jaganathan.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Shruthi Jaganathan</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">[Position]</blockquote>
+          <blockquote class="teamPos">Sponsorship</blockquote>
         </p>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Siddharth Mahesh.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Siddharth Mahesh</h2>
-        <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">[Position]</blockquote>
-        </p>
-      </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Shashank Mahesh.png'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle">
 </div><br/>Shashank Mahesh</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
           <blockquote class="teamPos">Technology</blockquote>
         </p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
+        <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Siddharth Mahesh.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Siddharth Mahesh</h2>
+        <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
+          <blockquote class="teamPos">Outreach</blockquote>
+        </p>
+      </div>
+      <div class="col-md-3">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:200px; height: 200px;background-image: url('img/team/Ryan Liao.jpg'); background-size: cover; background-position: center;" data-wow-delay="0.1s" class="wow rollIn center-block circle"></div><br/>Ryan Liao</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center teamPos">
-          <blockquote class="teamPos">[Position]</blockquote>
+          <blockquote class="teamPos">Outreach</blockquote>
         </p>
       </div>
     </div>
   </div>
 
-  <div style="z-index: 0;" class="stars bgimg-3">
-    <canvas class="demo-canvas"></canvas>
-    <div class="twinkling"></div>
-    <div style="background: transparent url(img/bgimages/clouds2.png) repeat top center;" class="clouds"></div>
-  </div>
-
-  <div style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  <div style="z-index: 0;" class="stars bgimg-1">
+    <div style="z-index: 0;" class="twinkling"></div>
+    <div style="z-index: 0;" style="background: transparent url(img/bgimages/clouds2.png) repeat top center;" class="clouds"></div>
+    <div style="position:relative; top: 30vmin;">
+      <div style="color:#FFF;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <h1 class="text-center" style="color: #ddd; text-transform: none;">Got any more questions?</h1>
+        <h3 style="color: #ddd; text-transform: none;">Contact us at <a href="mailto:tinohacks2017@gmail.com">tinohacks17@gmail.com</a> for any questions or concerns.
+If you would like to sponsor us, please click <a href="#">here</a>.
+If you’re interested in mentoring, feel free to drop us an email.</h3>
+      </div>
     </div>
   </div>
 
-  <div style="z-index: 0;" class="stars bgimg-1">
-    <canvas class="demo-canvas"></canvas>
-    <div class="twinkling"></div>
-    <div style="background: transparent url(img/bgimages/clouds2.png) repeat top center;" class="clouds"></div>
-  </div>
+
+  <footer>
+    <div style="position:relative;">
+      <div style="color:#000;background-color:#FFF;text-align:center;padding:50px 80px;text-align: justify;">
+        <div class="row">
+          <h1 class="text-center">Made with <i class="fa fa-heart" aria-hidden="true"></i>
+ by TinoHacks</h1>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="text-center social-media">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <br/>
+        <p class="text-center">&copy; TinoHacks 2017</p>
+      </div>
+    </div>
+  </footer>
 
   <!--JQuery-->
   <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
