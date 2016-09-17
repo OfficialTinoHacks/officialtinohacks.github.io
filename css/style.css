@@ -133,6 +133,10 @@ a .scrollArrow {
     transform: rotate(-45deg) translate(0, 0);
   }
 }
+.teamPos {
+  font-size: 3vmin;
+  font-weight: 100;
+}
 .caption {
   position: absolute;
   left: 0;
