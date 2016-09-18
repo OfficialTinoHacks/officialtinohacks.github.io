@@ -64,7 +64,6 @@ HEADER
   width: 100%;
   margin: 0 auto;
 }
-
 .btnContainer {
   position: absolute;
   z-index: 100;
@@ -72,7 +71,6 @@ HEADER
   width: 100%;
   margin: 0 auto;
 }
-
 .logoContainer {
   position: absolute;
   z-index: 100;
@@ -80,7 +78,6 @@ HEADER
   width: 100%;
   margin: 0 auto;
 }
-
 .btnd:active, .btnd:focus, .btnd.active {
   background-image: none;
   outline: 0;
@@ -281,28 +278,23 @@ Menu
   box-shadow: -5px 0px 20px black;
   color: #FFF;
 }
-
 .sidebarContainer ul {
   margin-top: -42vh;
   list-style: none;
 }
-
 .sidebarContainer ul li {
   padding: 30px;
   background-color: #006abc;
   font-size: 2em;
   text-align: center;
 }
-
 .sidebarContainer ul li:hover {
   background-color: #004f8c;
   cursor: pointer;
 }
-
 .sidebarContainer ul li a {
   color: #FFF;
 }
-
 #sidebarCircle {
   background: #0078D7;
   width: 60px;
@@ -311,14 +303,12 @@ Menu
   margin-top: 42vh;
   cursor: pointer;
 }
-
 #sidebarCircle i {
   vertical-align: middle;
   line-height: 80px;
   color: #FFF;
   font-size: 1.2em;
 }
-
 .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
   cursor: pointer;
   border-radius: 1px;
