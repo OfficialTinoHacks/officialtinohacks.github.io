@@ -1,6 +1,7 @@
 /*****************************
 FONTS
 ******************************/
+
 @font-face {
   font-family: "lightHelvetica";
   src: url(../resources/HelveticaNeue-UltraLight.ttf);
@@ -17,6 +18,7 @@ FONTS
 /*****************************
 ELEMENTS
 ******************************/
+
 body, html {
   height: 100%;
   margin: 0;
@@ -27,11 +29,9 @@ body, html {
   width: 100%;
   text-align: center;
 }
-
 body {
   overflow-x: hidden;
 }
-
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
   background-attachment: fixed;
@@ -56,14 +56,7 @@ body {
 /*****************************
 HEADER
 ******************************/
-.menuContainer {
-  background-color: black;
-  padding: 10px;
-  position: fixed;
-  z-index: 100;
-  right: 2em;
-  top: 2em;
-}
+
 .arrowContainer {
   position: absolute;
   z-index: 100;
@@ -71,13 +64,23 @@ HEADER
   width: 100%;
   margin: 0 auto;
 }
+
 .btnContainer {
+  position: absolute;
+  z-index: 100;
+  bottom: 20vmin;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logoContainer {
   position: absolute;
   z-index: 100;
   bottom: 10vmin;
   width: 100%;
   margin: 0 auto;
 }
+
 .btnd:active, .btnd:focus, .btnd.active {
   background-image: none;
   outline: 0;
@@ -100,12 +103,6 @@ HEADER
   color: #000;
   border: 1px solid white;
 }
-
-.menu {
-  behavior: url(PIE.htc);
-  width: 2.5em;
-  height: 2.5em;
-}
 a .scrollArrow {
   position: relative;
   width: 24px;
@@ -119,6 +116,7 @@ a .scrollArrow {
   -webkit-animation: sdb04 1s infinite;
   animation: sdb04 1s infinite;
   box-sizing: border-box;
+  text-align: center;
 }
 @-webkit-keyframes sdb04 {
   0% {
@@ -155,6 +153,7 @@ a .scrollArrow {
 /*****************************
 Q&A
 ******************************/
+
 .circle {
   border-radius: 50%;
 }
@@ -174,17 +173,16 @@ Q&A
 /*****************************
 Team Members
 ******************************/
+
 .teamPos {
   font-size: 3.5vmin !important;
   font-weight: 100 !important;
   font-style: "lightHelvetica", sans-serif;
 }
-
 a:hover {
   text-decoration: none;
   color: #007fff;
 }
-
 .caption span.border {
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
@@ -204,6 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 /*****************************
 Footer Elements
 ******************************/
+
 .twitter {
   height: 60px;
   width: 60px;
@@ -249,4 +248,105 @@ Footer Elements
 .social-media i {
   margin-top: 20px;
   color: white;
+}
+
+/*****************************
+Menu
+******************************/
+
+#menuBtn {
+  cursor: pointer;
+}
+.menuContainer {
+  background: black;
+  padding-top: 25px;
+  padding-left: 12px;
+  position: fixed;
+  z-index: 100;
+  right: 1em;
+  top: 1em;
+  width: 60px;
+  height: 60px;
+}
+.sidebarContainer {
+  background-color: #0078D7;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  right: -50%;
+  top: 0em;
+  width: 25%;
+  border-radius: 5px 0px 0px 5px;
+  box-shadow: -5px 0px 20px black;
+  color: #FFF;
+}
+
+.sidebarContainer ul {
+  margin-top: -42vh;
+  list-style: none;
+}
+
+.sidebarContainer ul li {
+  padding: 30px;
+  background-color: #006abc;
+  font-size: 2em;
+  text-align: center;
+}
+
+.sidebarContainer ul li:hover {
+  background-color: #004f8c;
+  cursor: pointer;
+}
+
+.sidebarContainer ul li a {
+  color: #FFF;
+}
+
+#sidebarCircle {
+  background: #0078D7;
+  width: 60px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: 42vh;
+  cursor: pointer;
+}
+
+#sidebarCircle i {
+  vertical-align: middle;
+  line-height: 80px;
+  color: #FFF;
+  font-size: 1.2em;
+}
+
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.nav-toggle span:before {
+  top: -10px;
+}
+.nav-toggle span:after {
+  bottom: -10px;
+}
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+.nav-toggle.active span {
+  background-color: transparent;
+}
+.nav-toggle.active span:before, .nav-toggle.active span:after {
+  top: 0;
+}
+.nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+.nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }

@@ -51,16 +51,31 @@
 </head>
 
 <body>
+
   <div id="large-header" style="z-index: 0;" class="large stars bgimg-1">
     <canvas class="demo-canvas"></canvas>
     <div class="twinkling"></div>
-    <div style="background: transparent url(img/bgimages/clouds5.png) repeat top center;" class="clouds"></div>
-    <div class="menuContainer">
-      <a><img class="menu" src="img/menu.svg" alt="button" /></a>
+
+    <div class="animated zoomInUp logoContainer">
+      <img class="img-responsive center-block" style="z-index: 1;" src="img/bgimages/clouds5.png" />
+    </div>
+    <div class="sidebarContainer">
+      <div id="sidebarCircle" class="circle"><i class="fa fa-chevron-right"></i></div>
+      <ul>
+        <li><a href="#large-header"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-info-circle"></i> About</a></li>
+        <li><a href="#sponsors"><i class="fa fa-info-circle"></i> Sponsors</a></li>
+        <li><a href="#team"><i class="fa fa-group"></i> Team</a></li>
+        <li><a href="#questions"><i class="fa fa-info-circle"></i> Questions</a></li>
+      </ul>
+    </div>
+
+    <div id="menuBtn" class="nav-toggle menuContainer">
+      <a class="nav-toggle"><span></span></a>
     </div>
 
     <div class="btnContainer">
-      <button class="btn-default">Register Now</button>
+      <button class="animated slideInUp btn-default">Register Now</button>
     </div>
 
     <a class="arrowContainer">
@@ -68,7 +83,7 @@
     </a>
   </div>
 
-  <div style="color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <div id="about" style="position: relative; z-index: -1; color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
     <img class="center-block img-responsive" width="436" height="335" src="img/logo.png" />
     <div class="row">
       <div class="col-md-4">
@@ -86,7 +101,7 @@
       <div class="col-md-4">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature iconContainer"><i style="line-height: 100px;" class="fa fa-map-marker fa-lg" aria-hidden="true"></i></div><br/>Time and Location?</h2>
         <p data-wow-delay="0.1s" class="wow fadeIn text-center">TinoHacks will kick off at 9:00 am on Saturday March 4th until 1:00 pm on Sunday March 5th. Stay tuned for our venue reveal!
-</p>
+        </p>
       </div>
     </div>
     <div class="row">
@@ -114,8 +129,7 @@
       <div class="col-md-4">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature  iconContainer"><i style="line-height: 100px;" class="fa fa-users fa-lg" aria-hidden="true"></i>
 </div></span><br/>Who can attend?</h2>
-        <p data-wow-delay="0.1s" class="wow fadeIn text-center">This event is open to high schoolers only. However, college students may sign up to mentor, volunteer, or lead a workshop. Sign up here, or email <strong>tinohacks2017@gmail.com</strong> if you have any questions or concerns.
-          or concerns.</p>
+        <p data-wow-delay="0.1s" class="wow fadeIn text-center">This event is open to high schoolers only. However, college students may sign up to mentor, volunteer, or lead a workshop. Sign up here, or email <strong>tinohacks2017@gmail.com</strong> if you have any questions or concerns. or concerns.</p>
       </div>
       <div class="col-md-4">
         <h2 data-wow-delay="0.1s" class="wow fadeIn text-center"><div style="width:100px; height: 100px;" data-wow-delay="0.1s" class="wow rollIn center-block circle feature iconContainer"><i style="line-height: 100px;" class="fa fa-bed fa-lg" aria-hidden="true"></i></div><br/>Do I have to stay overnight?</h2>
@@ -138,13 +152,13 @@
     </div>
   </div>
 
-  <div style="z-index: 0;" class="stars bgimg-1">
+  <div style="position: relative; z-index: -1;" class="stars bgimg-1">
     <div style="z-index: 0;" class="twinkling"></div>
     <div style="z-index: 0;" id="multipleClouds" style="background: transparent url('img/bgimages/clouds6.png') repeat top center" class="clouds"></div>
   </div>
 
 
-  <div style="z-index: 0; color:#FFF;background-color:#282E34;text-align:center;padding:50px 80px;text-align: center;">
+  <div id="sponsors" style="position: relative; z-index: -1; color:#FFF;background-color:#282E34;text-align:center;padding:50px 80px;text-align: center;">
     <h1 style="color: white">Sponsors</h1>
     <br/>
     <div style="z-index: 0" class="row">
@@ -185,7 +199,7 @@
   </div>
 
 
-  <div style="color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: text-center;">
+  <div id="team" style="position: relative; z-index: -1; color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: text-center;">
     <h1>TinoHacks Team</h1>
     <div class="row">
       <div class="col-md-3">
@@ -243,7 +257,7 @@
     </div>
   </div>
 
-  <div style="z-index: 0;" class="stars bgimg-1">
+  <div id="questions" style="position: relative; z-index: -1;" class="stars bgimg-1">
     <div style="z-index: 0;" class="twinkling"></div>
     <div style="z-index: 0;" style="background: transparent url(img/bgimages/clouds2.png) repeat top center;" class="clouds"></div>
     <div style="position:relative; top: 30vmin;">
@@ -257,7 +271,7 @@ If you’re interested in mentoring, feel free to drop us an email.</h3>
   </div>
 
   <footer>
-    <div style="position:relative;">
+    <div style="position: relative; z-index: -1;">
       <div style="color:#000;background-color:#FFF;text-align:center;padding:50px 80px;text-align: justify;">
         <div class="row">
           <h1 class="text-center">Made with <i class="fa fa-heart" aria-hidden="true"></i>
