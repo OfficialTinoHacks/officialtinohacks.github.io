@@ -1,4 +1,4 @@
-# tinohacks.tech
+# TinoHacks Official Website
 
 #### The official TinoHacks website
 
