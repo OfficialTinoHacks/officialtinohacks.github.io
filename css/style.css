@@ -214,7 +214,6 @@ Footer Elements
   background-color: #1590BF;
   transition: background-color 0.3s ease;
 }
-
 .facebook {
   height: 60px;
   width: 60px;
@@ -225,12 +224,10 @@ Footer Elements
   text-align: center;
   margin-right: 20px;
 }
-
 .facebook:hover {
   background-color: #324C85;
   transition: background-color 0.3s ease;
 }
-
 .instagram {
   height: 60px;
   width: 60px;
@@ -342,4 +339,31 @@ Menu
 }
 .nav-toggle.active span:after {
   transform: rotate(-45deg);
+}
+.diagonal {
+  background: #FCFDFF;
+  position: relative;
+  z-index: 1
+}
+.diagonal:after, .diagonal:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden
+}
+
+.diagonal:before {
+  top: 0;
+  transform: skewY(3deg);
+  transform-origin: 100%
+}
+.diagonal:after {
+  bottom: 0;
+  transform: skewY(-3deg);
+  transform-origin: 100%
 }
