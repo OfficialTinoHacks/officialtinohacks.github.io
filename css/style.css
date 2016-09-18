@@ -214,10 +214,7 @@ Footer Elements
   background-color: #1590BF;
   transition: background-color 0.3s ease;
 }
-.facebook:hover {
-  background-color: #324C85;
-  transition: background-color 0.3s ease;
-}
+
 .facebook {
   height: 60px;
   width: 60px;
@@ -228,10 +225,12 @@ Footer Elements
   text-align: center;
   margin-right: 20px;
 }
-.instagram:hover {
-  background-color: #663528;
+
+.facebook:hover {
+  background-color: #324C85;
   transition: background-color 0.3s ease;
 }
+
 .instagram {
   height: 60px;
   width: 60px;
@@ -241,6 +240,10 @@ Footer Elements
   display: inline-block;
   text-align: center;
   margin-right: 20px;
+}
+.instagram:hover {
+  background-color: #663528;
+  transition: background-color 0.3s ease;
 }
 .social-media i {
   margin-top: 20px;
