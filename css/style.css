@@ -283,17 +283,18 @@ Menu
   list-style: none;
 }
 .sidebarContainer ul li {
-  padding: 30px;
+  padding: 25px;
   background-color: #006abc;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
 }
 .sidebarContainer ul li:hover {
   background-color: #004f8c;
   cursor: pointer;
 }
-.sidebarContainer ul li a {
+.sidebarContainer ul a {
   color: #FFF;
+  text-decoration: none;
 }
 #sidebarCircle {
   background: #0078D7;
@@ -366,4 +367,9 @@ Menu
   bottom: 0;
   transform: skewY(-3deg);
   transform-origin: 100%
+}
+
+table tr {
+  height: 30px;
+  font-size: 1.3em;
 }
