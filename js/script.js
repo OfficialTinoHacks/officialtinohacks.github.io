@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  new WOW().init();
+
   //Smooth Scrolling
 
   $('a[href*="#"]:not([href="#"])').click(function() {
