@@ -68,4 +68,64 @@ $(document).ready(function() {
     $(".sidebarContainer").css("transition", "right 1s, background 3s ease");
   }
 
+  $(".teamPhoto").click(function(e) {
+    var photo = $(this); //or use jQuery's $("#photo")
+    var overlay = $(".overlay");
+    var personName = photo.parent().text().trim();
+    var description = "";
+
+    if (personName == "Sriharsha G.") {
+      personName = "Sriharsha Guduguntla";
+      description = "Webmaster and Technology Director"
+    } else if (personName == "Justine Qiu") {
+      description = "Lead organizer and founder of TinoHacks";
+    } else if (personName == "Davin Clark") {
+      description = "Co-lead organizer and co-founder of TinoHacks";
+    } else if (personName == "Kashyap Panda") {
+      description = "iOS App Lead and Technology Director";
+    } else if (personName == "Shruthi Jaganathan") {
+      description = "Sponsorship Manager";
+    } else if (personName == "Shashank Mahesh") {
+      description = "Android App Developer";
+    } else if (personName == "Siddharth Mahesh") {
+      description = "Outreach Manager";
+    } else if (personName == "Ryan Liao") {
+      description = "Outreach Co-Manager";
+    }
+
+    console.log('img/highqualityteampics/' + personName + '.jpg');
+    $(".overlay").css("background-image", "url('img/highqualityteampics/" + personName + ".jpg')");
+
+    var overlayHTML = '<div id="closeOverlay">';
+    overlayHTML += '<br/>';
+    overlayHTML += '<h1 style="font-size: 3em;">' + personName + '<h1>';
+    overlayHTML += '<p style="font-size: 1em;">' + description + '</p>';
+    overlayHTML += '<a onclick="closeOverlay()" >&times;</a>';
+    overlayHTML += '</div>';
+
+    $(".overlay").html(overlayHTML);
+    //overlay.fadeIn('slow');
+    TweenMax.to(overlay, 2, {
+      display: "block",
+      top: 0,
+      ease: Expo.easeOut
+    });
+
+    /*TweenMax.to(photo, 1, {
+      width: 400,
+      height: 400
+    });*/
+
+  });
+
+
+
 });
+
+function closeOverlay() {
+  TweenMax.to($(".overlay"), 1, {
+    display: "block",
+    top: "-100vh",
+    ease: Expo.easeOut
+  });
+}
