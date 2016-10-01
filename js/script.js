@@ -39,7 +39,7 @@ $(document).ready(function() {
       $.each(data, function(key, val) {
         if (personName == val.name) {
 
-          $(".overlay").css("background-image", "url('" + val.img_low + "')");
+          $(".overlay").css("background-image", "url('" + val.img_hd + "')");
 
           var overlayHTML = '<div id="closeOverlay">';
           overlayHTML += '<br/>';
