@@ -17,8 +17,6 @@ $(document).ready(function() {
     }
   });
 
-  orderClouds(6, 11, "multipleClouds", 3000);
-
   function orderClouds(min, max, id, interval) {
     var cloudType = "clouds" + min;
     var cloudNum = min;
@@ -74,6 +72,14 @@ $(document).ready(function() {
     var personName = photo.parent().text().trim();
     var description = "";
 
+    $.getJSON("resources/teaminfo.json", function(data) {
+      var items = [];
+      $.each(data, function(key, val) {
+        console.log(key + " - " + val);
+      });
+
+    });
+
     if (personName == "Sriharsha G.") {
       personName = "Sriharsha Guduguntla";
       description = "Webmaster and Technology Director"
@@ -110,11 +116,6 @@ $(document).ready(function() {
       top: 0,
       ease: Expo.easeOut
     });
-
-    /*TweenMax.to(photo, 1, {
-      width: 400,
-      height: 400
-    });*/
 
   });
 
