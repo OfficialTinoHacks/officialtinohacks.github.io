@@ -2,6 +2,8 @@ $(document).ready(function() {
 
   new WOW().init();
 
+  addTeamInfo();
+
   //Smooth Scrolling
 
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -28,105 +30,72 @@ $(document).ready(function() {
     }, interval);
   }
 
-  var sidebarIsOpen = false;
-
-  $("#menuBtn").click(function(e) {
-    e.preventDefault();
-    if (sidebarIsOpen == false) {
-      sidebarIsOpen = true;
-    } else {
-      sidebarIsOpen = false;
-    }
-
-    controlSidebar();
-
-    $(this).toggleClass("active");
-
-  });
-
-  $("#sidebarCircle").click(function(e) {
-    e.preventDefault();
-    sidebarIsOpen = false;
-    controlSidebar();
-    $(".nav-toggle").removeClass("active");
-  });
-
-  function controlSidebar() {
-    if (!sidebarIsOpen) {
-      //Close
-      $(".sidebarContainer").css("right", "-50%");
-      $(".menuContainer").css("background", "black");
-
-    } else {
-      //Open
-      $(".sidebarContainer").css("right", "0%");
-      $(".menuContainer").css("background", "transparent");
-    }
-
-    $(".sidebarContainer").css("transition", "right 1s, background 3s ease");
-  }
-
-  $(".teamPhoto").click(function(e) {
-    var photo = $(this); //or use jQuery's $("#photo")
+  $(document).on('click', '.teamPhoto', function(e) {
+    var photo = $(this);
     var overlay = $(".overlay");
     var personName = photo.parent().text().trim();
-    var description = "";
 
-    $.getJSON("resources/teaminfo.json", function(data) {
-      var items = [];
+    getTeamJSON(function(data) {
       $.each(data, function(key, val) {
-        console.log(key + " - " + val);
+        if (personName == val.name) {
+
+          $(".overlay").css("background-image", "url('" + val.img_hd + "')");
+
+          var overlayHTML = '<div id="closeOverlay">';
+          overlayHTML += '<br/>';
+          overlayHTML += '<h1 style="font-size: 3em;">' + val.name + '<h1>';
+          overlayHTML += '<p style="font-size: 1em;">' + val.long_title + '</p>';
+          overlayHTML += '<a onclick="closeOverlay()" >&times;</a>';
+          overlayHTML += '</div>';
+
+          $(".overlay").html(overlayHTML);
+
+          TweenMax.to(overlay, 2, {
+            display: "block",
+            top: 0,
+            ease: Expo.easeOut
+          });
+
+          return false; //Ends loop
+        }
       });
 
     });
 
-    if (personName == "Sriharsha G.") {
-      personName = "Sriharsha Guduguntla";
-      description = "Webmaster and Technology Director"
-    } else if (personName == "Justine Qiu") {
-      description = "Lead organizer and founder of TinoHacks";
-    } else if (personName == "Davin Clark") {
-      description = "Co-lead organizer and co-founder of TinoHacks";
-    } else if (personName == "Kashyap Panda") {
-      description = "iOS App Lead and Technology Director";
-    } else if (personName == "Shruthi Jaganathan") {
-      description = "Sponsorship Manager";
-    } else if (personName == "Shashank Mahesh") {
-      description = "Android App Developer";
-    } else if (personName == "Siddharth Mahesh") {
-      description = "Outreach Manager";
-    } else if (personName == "Ryan Liao") {
-      description = "Outreach Co-Manager";
+  });
+});
+
+function addTeamInfo() {
+
+  getTeamJSON(function(data) {
+    for (var i = 0; i < data.length; i++) {
+      var teamHTML = '<h2 data-wow-delay="0.5s" class="wow fadeIn text-center">';
+      teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"></div><br/>' + data[i].name + '</h2>'
+      teamHTML += '<p class="text-center teamPos">'
+      teamHTML += '<blockquote data-wow-delay="0.2s" class="wow fadeInUp teamPos">' + data[i].short_title + '</blockquote>';
+      teamHTML += '</p>';
+
+      $("#member" + (i + 1)).html(teamHTML);
+
+      $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_hd + "')");
+
+      teamHTML = "";
     }
-
-    console.log('img/highqualityteampics/' + personName + '.jpg');
-    $(".overlay").css("background-image", "url('img/highqualityteampics/" + personName + ".jpg')");
-
-    var overlayHTML = '<div id="closeOverlay">';
-    overlayHTML += '<br/>';
-    overlayHTML += '<h1 style="font-size: 3em;">' + personName + '<h1>';
-    overlayHTML += '<p style="font-size: 1em;">' + description + '</p>';
-    overlayHTML += '<a onclick="closeOverlay()" >&times;</a>';
-    overlayHTML += '</div>';
-
-    $(".overlay").html(overlayHTML);
-    //overlay.fadeIn('slow');
-    TweenMax.to(overlay, 2, {
-      display: "block",
-      top: 0,
-      ease: Expo.easeOut
-    });
-
   });
 
-
-
-});
+}
 
 function closeOverlay() {
   TweenMax.to($(".overlay"), 1, {
     display: "block",
     top: "-100vh",
     ease: Expo.easeOut
+  });
+}
+
+function getTeamJSON(callback) {
+  //Load team info from json file
+  $.getJSON("resources/teaminfo.json", function(data) {
+    return callback(data);
   });
 }

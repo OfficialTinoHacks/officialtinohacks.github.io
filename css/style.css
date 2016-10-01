@@ -4,15 +4,15 @@ FONTS
 
 @font-face {
   font-family: "lightHelvetica";
-  src: url(../resources/HelveticaNeue-UltraLight.ttf);
+  src: url(../fonts/HelveticaNeue-UltraLight.ttf);
 }
 @font-face {
   font-family: "thinHelvetica";
-  src: url(../resources/HelveticaNeue-Thin.ttf);
+  src: url(../fonts/HelveticaNeue-Thin.ttf);
 }
 @font-face {
   font-family: "boldHelvetica";
-  src: url(../resources/HelveticaNeue-Bold.ttf);
+  src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
 /*****************************
@@ -373,6 +373,10 @@ table tr {
 .teamPhoto {
   box-shadow: 5px 0px 20px black;
   z-index: 200;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
 .teamPhoto:hover {
   margin-top: -10px;
@@ -390,7 +394,6 @@ table tr {
   position: fixed;
   top: -100vh;
 }
-
 #closeOverlay {
   width: 100%;
   height: 100%;
@@ -400,7 +403,6 @@ table tr {
   text-align: center;
   color: #FFF;
 }
-
 #closeOverlay a {
   position: relative;
   font-size: 3em;
@@ -411,7 +413,6 @@ table tr {
   color: #FFF;
   z-index: 2;
 }
-
 #closeOverlay a:hover {
   cursor: pointer;
 }
