@@ -77,7 +77,7 @@ function addTeamInfo() {
 
       $("#member" + (i + 1)).html(teamHTML);
 
-      $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_hd + "')");
+      $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_low + "')");
 
       teamHTML = "";
     }
