@@ -74,7 +74,7 @@ HEADER
 .logoContainer {
   position: absolute;
   z-index: 100;
-  bottom: 10vmin;
+  bottom: 35vmin;
   width: 100%;
   margin: 0 auto;
 }
