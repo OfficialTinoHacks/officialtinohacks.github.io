@@ -26,12 +26,11 @@ function controlSidebar() {
     //Close
     $(".sidebarContainer").css("right", "-50%");
     $(".menuContainer").css("background", "black");
-
+    $("body").css("margin-right", "0%");
   } else {
     //Open
     $(".sidebarContainer").css("right", "0%");
     $(".menuContainer").css("background", "transparent");
+    $("body").css("margin-right", "25%");
   }
-
-  $(".sidebarContainer").css("transition", "right 1s, background 3s ease");
 }

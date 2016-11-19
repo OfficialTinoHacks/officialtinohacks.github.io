@@ -26,11 +26,11 @@ body, html {
   font-weight: 200;
   font-size: 1em;
   color: #777;
-  width: 100%;
   text-align: center;
 }
 body {
   overflow-x: hidden;
+  transition: margin-right 1s ease;
 }
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
@@ -286,6 +286,7 @@ Menu
   border-radius: 5px 0px 0px 5px;
   box-shadow: -5px 0px 20px black;
   color: #FFF;
+  transition: right 1s ease, background 3s ease;
 }
 .sidebarContainer ul {
   margin-top: -42vh;
@@ -388,10 +389,17 @@ table tr {
   background-size: cover;
   background-position: center;
 }
-.teamPhoto:hover {
-  margin-top: -10px;
-  transition: margin-top 0.4s ease;
-  cursor: pointer;
+.memberDesc {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  position: absolute;
+  padding: 40px 100px 80px 100px;
+}
+.memberDesc p {
+  font-size: 0.9em;
+  color: black;
 }
 .overlay {
   display: none;
@@ -425,4 +433,15 @@ table tr {
 }
 #closeOverlay a:hover {
   cursor: pointer;
+}
+.photo-overlay p {
+  line-height: 200px;
+  vertical-align: middle;
+  text-align: center;
+  color: #FFF;
+}
+.photo-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
 }

@@ -2,7 +2,23 @@ $(document).ready(function() {
 
   new WOW().init();
 
-  addTeamInfo();
+  addTeamInfo(function() {
+    $(".teamPhoto").hover(function() {
+      $(this).css("margin-top", "-10px");
+      $(this).css("transition", "margin-top 0.4s ease");
+      $(this).css("cursor", "pointer");
+      $(this).children().fadeIn('fast');
+      $(this).children().children().removeClass();
+      $(this).children().children().addClass("animated slideInUp");
+    }, function() {
+      $(this).css("margin-top", "0px");
+      $(this).css("transition", "margin-top 0.4s ease");
+      $(this).css("cursor", "auto");
+      $(this).children().children().removeClass();
+      $(this).children().children().addClass("animated slideOutDown");
+      $(this).children().fadeOut('fast');
+    });
+  });
 
   //Smooth Scrolling
 
@@ -19,7 +35,7 @@ $(document).ready(function() {
     }
   });
 
-  function orderClouds(min, max, id, interval) {
+  /*function orderClouds(min, max, id, interval) {
     var cloudType = "clouds" + min;
     var cloudNum = min;
     setInterval(function() {
@@ -28,16 +44,17 @@ $(document).ready(function() {
       if (cloudNum == max) cloudNum = min;
       cloudType = "clouds" + cloudNum;
     }, interval);
-  }
+  }*/
 
-  $(document).on('click', '.teamPhoto', function(e) {
-    var photo = $(this);
+  $(document).on('click', '.teamPhoto .photo-overlay', function(e) {
+    var photo = $(this).parent();
     var overlay = $(".overlay");
-    var personName = photo.parent().text().trim();
+    var personName = photo.parent().text().trim().substring(10);
 
     getTeamJSON(function(data) {
       $.each(data, function(key, val) {
         if (personName == val.name) {
+          console.log(val);
 
           $(".overlay").css("background-image", "url('" + val.img_hd + "')");
 
@@ -45,6 +62,7 @@ $(document).ready(function() {
           overlayHTML += '<br/>';
           overlayHTML += '<h1 style="font-size: 3em;">' + val.name + '<h1>';
           overlayHTML += '<p style="font-size: 1em;">' + val.long_title + '</p>';
+          overlayHTML += '<div class="memberDesc"><p>' + val.description + '</p></div>';
           overlayHTML += '<a onclick="closeOverlay()" >&times;</a>';
           overlayHTML += '</div>';
 
@@ -65,12 +83,12 @@ $(document).ready(function() {
   });
 });
 
-function addTeamInfo() {
+function addTeamInfo(callback) {
 
   getTeamJSON(function(data) {
     for (var i = 0; i < data.length; i++) {
       var teamHTML = '<h2 data-wow-delay="0.5s" class="wow fadeIn text-center">';
-      teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"></div><br/>' + data[i].name + '</h2>'
+      teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"><div style="display: none;" class="circle photo-overlay"><p class="animated fadeInUp">Learn more</p></div></div><br/>' + data[i].name + '</h2>'
       teamHTML += '<p class="text-center teamPos">'
       teamHTML += '<blockquote data-wow-delay="0.2s" class="wow fadeInUp teamPos">' + data[i].short_title + '</blockquote>';
       teamHTML += '</p>';
@@ -80,6 +98,8 @@ function addTeamInfo() {
       $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_low + "')");
 
       teamHTML = "";
+
+      callback();
     }
   });
 
