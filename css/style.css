@@ -73,7 +73,7 @@ HEADER
 }
 .logoContainer {
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   bottom: 15vmin;
   width: 100%;
   margin: 0 auto;
@@ -81,12 +81,21 @@ HEADER
 .registerDiv {
   background: transparent !important;
   color: #FFF;
-  border: 1px solid white;
-  width: 200px;
+  width: 55vw;
   height: 60px;
   vertical-align: middle;
-  line-height: 60px;
-  font-size: 1em;
+  font-size: 3vmin;
+  margin: 0 auto;
+}
+.registerDiv input {
+  width: 30vw;
+  color: #000;
+  height: 50px;
+  font-size: 3vmin;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 0px;
 }
 .btnd:active, .btnd:focus, .btnd.active {
   background-image: none;
