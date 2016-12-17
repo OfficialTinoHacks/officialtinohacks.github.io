@@ -83,7 +83,6 @@ $(document).ready(function() {
     });
 });
 
-
 function addTeamInfo(callback) {
 
     getTeamJSON(function(data) {
