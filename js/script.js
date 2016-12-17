@@ -81,75 +81,74 @@ $(document).ready(function() {
         });
 
     });
+});
 
 
-    function addTeamInfo(callback) {
+function addTeamInfo(callback) {
 
-        getTeamJSON(function(data) {
-            for (var i = 0; i < data.length; i++) {
-                var teamHTML = '<h2 data-wow-delay="0.5s" class="wow fadeIn text-center">';
-                teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"><div style="display: none;" class="circle photo-overlay"><p class="animated fadeInUp">Learn more</p></div></div><br/>' + data[i].name + '</h2>'
-                teamHTML += '<p class="text-center teamPos">'
-                teamHTML += '<blockquote data-wow-delay="0.2s" class="wow fadeInUp teamPos">' + data[i].short_title + '</blockquote>';
-                teamHTML += '</p>';
+    getTeamJSON(function(data) {
+        for (var i = 0; i < data.length; i++) {
+            var teamHTML = '<h2 data-wow-delay="0.5s" class="wow fadeIn text-center">';
+            teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"><div style="display: none;" class="circle photo-overlay"><p class="animated fadeInUp">Learn more</p></div></div><br/>' + data[i].name + '</h2>'
+            teamHTML += '<p class="text-center teamPos">'
+            teamHTML += '<blockquote data-wow-delay="0.2s" class="wow fadeInUp teamPos">' + data[i].short_title + '</blockquote>';
+            teamHTML += '</p>';
 
-                $("#member" + (i + 1)).html(teamHTML);
+            $("#member" + (i + 1)).html(teamHTML);
 
-                $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_low + "')");
+            $("#member" + (i + 1) + " > h2 > div.teamPhoto").css("background-image", "url('" + data[i].img_low + "')");
 
-                teamHTML = "";
+            teamHTML = "";
 
-                callback();
-            }
-        });
-
-    }
-
-    function closeOverlay() {
-        TweenMax.to($(".overlay"), 1, {
-            display: "block",
-            top: "-100vh",
-            ease: Expo.easeOut
-        });
-    }
-
-    function getTeamJSON(callback) {
-        //Load team info from json file
-        $.getJSON("resources/teaminfo.json", function(data) {
-            return callback(data);
-        });
-    }
-
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAffDA8-Vt_FrAN2w8XMQCjh_gLVE7YClM",
-        authDomain: "tinohacks-emails.firebaseapp.com",
-        databaseURL: "https://tinohacks-emails.firebaseio.com",
-        storageBucket: "tinohacks-emails.appspot.com",
-        messagingSenderId: "972497710797"
-    };
-
-    firebase.initializeApp(config);
-
-    var db = firebase.database();
-
-    $("#notifyEmail").on('keyup', function(e) {
-        if (e.keyCode == 13) {
-            var email = $(this).val().trim();
-            if (validateEmail(email)) {
-                db.ref('emails').push(email);
-                alert("Thanks for leaving your email. We will notify you as soon as registration opens.");
-                $(this).val("");
-            }
+            callback();
         }
     });
 
-    function validateEmail(email) {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            return true;
-        }
-        alert("You have entered an invalid email address!")
-        return false;
-    }
+}
 
+function closeOverlay() {
+    TweenMax.to($(".overlay"), 1, {
+        display: "block",
+        top: "-100vh",
+        ease: Expo.easeOut
+    });
+}
+
+function getTeamJSON(callback) {
+    //Load team info from json file
+    $.getJSON("resources/teaminfo.json", function(data) {
+        return callback(data);
+    });
+}
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAffDA8-Vt_FrAN2w8XMQCjh_gLVE7YClM",
+    authDomain: "tinohacks-emails.firebaseapp.com",
+    databaseURL: "https://tinohacks-emails.firebaseio.com",
+    storageBucket: "tinohacks-emails.appspot.com",
+    messagingSenderId: "972497710797"
+};
+
+firebase.initializeApp(config);
+
+var db = firebase.database();
+
+$("#notifyEmail").on('keyup', function(e) {
+    if (e.keyCode == 13) {
+        var email = $(this).val().trim();
+        if (validateEmail(email)) {
+            db.ref('emails').push(email);
+            alert("Thanks for leaving your email. We will notify you as soon as registration opens.");
+            $(this).val("");
+        }
+    }
 });
+
+function validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return true;
+    }
+    alert("You have entered an invalid email address!")
+    return false;
+}
