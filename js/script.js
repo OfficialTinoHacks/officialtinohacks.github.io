@@ -138,7 +138,11 @@ $("#notifyEmail").on('keyup', function(e) {
         var email = $(this).val().trim();
         if (validateEmail(email)) {
             db.ref('emails').push(email);
-            alert("Thanks for leaving your email. We will notify you as soon as registration opens.");
+            $("body").snackbar({
+                message: "Thanks for leaving your email. We will notify you as soon as registration opens. Swipe to close.",
+                duration: 2,
+                swipe: true
+            });
             $(this).val("");
         }
     }
@@ -148,6 +152,10 @@ function validateEmail(email) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         return true;
     }
-    alert("You have entered an invalid email address!")
+    $("body").snackbar({
+        message: "You have entered an invalid email address! Swipe to close.",
+        swipe: true,
+        duration: 2
+    });
     return false;
 }
