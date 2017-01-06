@@ -4,12 +4,10 @@ $(document).ready(function() {
 
     addTeamInfo(function() {
         $(".teamPhoto").hover(function() {
-
             $(this).css("cursor", "pointer");
             $(this).children().css("display", "block");
             $(this).children().children().css("display", "block");
         }, function() {
-
             $(this).css("cursor", "auto");
             $(this).children().css("display", "none");
             $(this).children().children().css("display", "none");
@@ -30,17 +28,6 @@ $(document).ready(function() {
             }
         }
     });
-
-    /*function orderClouds(min, max, id, interval) {
-      var cloudType = "clouds" + min;
-      var cloudNum = min;
-      setInterval(function() {
-        $("#" + id).css("background", "transparent url('img/bgimages/" + cloudType + ".png') repeat top center");
-        cloudNum++;
-        if (cloudNum == max) cloudNum = min;
-        cloudType = "clouds" + cloudNum;
-      }, interval);
-    }*/
 
     $(document).on('click', '.teamPhoto .photo-overlay', function(e) {
         var photo = $(this).parent();
