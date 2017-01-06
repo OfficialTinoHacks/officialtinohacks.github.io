@@ -87,10 +87,10 @@ function addTeamInfo(callback) {
 
     getTeamJSON(function(data) {
         for (var i = 0; i < data.length; i++) {
-            var teamHTML = '<h2 data-wow-delay="0.5s" class="wow fadeIn text-center">';
-            teamHTML += '<div data-wow-delay="0.1s" class="wow fadeInUp center-block circle teamPhoto"><div style="display: none;" class="circle photo-overlay"><p class="animated fadeInUp">Learn more</p></div></div><br/>' + data[i].name + '</h2>'
+            var teamHTML = '<h2 class="text-center">';
+            teamHTML += '<div class="center-block circle teamPhoto"><div style="display: none;" class="circle photo-overlay"><p>Learn more</p></div></div><br/>' + data[i].name + '</h2>'
             teamHTML += '<p class="text-center teamPos">'
-            teamHTML += '<blockquote data-wow-delay="0.2s" class="wow fadeInUp teamPos">' + data[i].short_title + '</blockquote>';
+            teamHTML += '<blockquote class="teamPos">' + data[i].short_title + '</blockquote>';
             teamHTML += '</p>';
 
             $("#member" + (i + 1)).html(teamHTML);
