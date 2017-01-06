@@ -4,19 +4,15 @@ $(document).ready(function() {
 
     addTeamInfo(function() {
         $(".teamPhoto").hover(function() {
-            $(this).css("margin-top", "-10px");
-            $(this).css("transition", "margin-top 0.4s ease");
+
             $(this).css("cursor", "pointer");
-            $(this).children().fadeIn('fast');
-            $(this).children().children().removeClass();
-            $(this).children().children().addClass("animated slideInUp");
+            $(this).children().css("display", "block");
+            $(this).children().children().css("display", "block");
         }, function() {
-            $(this).css("margin-top", "0px");
-            $(this).css("transition", "margin-top 0.4s ease");
+
             $(this).css("cursor", "auto");
-            $(this).children().children().removeClass();
-            $(this).children().children().addClass("animated slideOutDown");
-            $(this).children().fadeOut('fast');
+            $(this).children().css("display", "none");
+            $(this).children().children().css("display", "none");
         });
     });
 
