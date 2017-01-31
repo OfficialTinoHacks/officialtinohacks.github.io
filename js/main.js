@@ -84,13 +84,13 @@ $(document).ready(function() {
 
     }
 
-    function closeOverlay() {
+    /**function closeOverlay() {
         TweenMax.to($(".overlay"), 1, {
             display: "block",
             top: "-100vh",
             ease: Expo.easeOut
         });
-    }
+    }*/
 
     function getTeamJSON(callback) {
         //Load team info from json file
