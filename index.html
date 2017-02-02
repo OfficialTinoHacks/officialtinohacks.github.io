@@ -87,7 +87,11 @@
             <a class="nav-toggle"><span></span></a>
         </div>
         <div style="text-align: center;" class="btnContainer">
-            <div class="registerDiv">Registration not opened yet. If you would like to be notified when registration opens, enter your email below, and hit enter<br/><input type="email" name="email" id="notifyEmail" placeholder="Your email" /></div>
+            <div class="registerDiv">
+                <p>Early Registration is open! Priority will be given to all applicants that register now.</p>
+                <br/>
+                <a class="btn typeform-share btn-default btn-xl" href="https://tinohacks.typeform.com/to/TQgSSl" data-mode="1" target="_blank">Register Now</a>
+            </div>
         </div>
     </div>
     <div class="diagonal" id="about" style="position: relative; z-index: -1; color: #000;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
@@ -199,7 +203,7 @@
         <br/>
         <br/>
         <h2 style="color: white">We will be releasing our full list of amazing sponsors shortly. Stay tuned!</h2>
-        <h3 style="font-size: 1.5em; color: white">Want to sponsor us? Check out our sponsorship packet
+        <h3 style="font-size: 4vmin; color: white">Want to sponsor us? Check out our sponsorship packet
             <a style="color:#377bb5" href="resources/sponsorship-prospectus.pdf" target="_blank">here</a>.</h3>
         <br/>
         <br/>
@@ -311,6 +315,31 @@
         </div>
     </footer>
     <script>
+        (function() {
+            var qs, js, q, s, d = document,
+                gi = d.getElementById,
+                ce = d.createElement,
+                gt = d.getElementsByTagName,
+                id = 'typef_orm_share',
+                b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+            if (!gi.call(d, id)) {
+                js = ce.call(d, 'script');
+                js.id = id;
+                js.src = b + 'share.js';
+                q = gt.call(d, 'script')[0];
+                q.parentNode.insertBefore(js, q)
+            }
+            id = id + '_';
+            if (!gi.call(d, id)) {
+                qs = ce.call(d, 'link');
+                qs.rel = 'stylesheet';
+                qs.id = id;
+                qs.href = b + 'share-button.css';
+                s = gt.call(d, 'head')[0];
+                s.appendChild(qs, s)
+            }
+        })()
+
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function() {

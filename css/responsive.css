@@ -15,17 +15,6 @@
   .registerDiv {
     font-size: 0.5em;
   }
-
-  .registerDiv input {
-      width: 30vw;
-      color: #000;
-      height: 50px;
-      font-size: 3vmin;
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 20px;
-      border-radius: 0px;
-  }
 }
 
 /* Landscape */

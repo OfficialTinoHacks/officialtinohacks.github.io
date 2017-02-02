@@ -81,7 +81,7 @@ HEADER
     margin: 0 auto;
 }
 
-.registerDiv input {
+/*.registerDiv input {
     width: 30vw;
     color: #000;
     height: 50px;
@@ -90,7 +90,7 @@ HEADER
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 0px;
-}
+}*/
 
 .btnd:active, .btnd:focus, .btnd.active {
     background-image: none;
@@ -99,13 +99,18 @@ HEADER
     box-shadow: none !important;
 }
 
+.btn-xl {
+    padding: 10px 20px;
+    border-radius: 10px;
+    width:50%;
+    font-size: 3.5vmin;
+}
+
 .btn-default {
+    text-align: center;
     background: transparent !important;
     color: #FFF;
     border: 1px solid white;
-    width: 130px;
-    height: 60px;
-    font-size: 1.2em;
 }
 
 .btn-default:hover {
