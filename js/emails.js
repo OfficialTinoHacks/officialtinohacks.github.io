@@ -41,13 +41,13 @@ $(document).ready(function() {
 
                         db.ref('emails').child(uid).set(email);
 
+                        $(this).val("");
+
                         $("body").snackbar({
                             message: "Thanks for leaving your email. We will notify you as soon as registration opens. Swipe to close.",
                             duration: 2,
                             swipe: true
                         });
-
-                        $(this).val("");
 
                     } else {
                         // User is signed out.
