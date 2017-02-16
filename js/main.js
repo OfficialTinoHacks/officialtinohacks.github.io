@@ -14,6 +14,15 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on('scroll', function() {
+        if ($(this).scrollTop() >= $('#about').position().top - 186) {
+            $(".dateContainer").css("opacity", "0");
+        } else if ($(this).scrollTop() >= $('#large-header').position().top) {
+            $(".dateContainer").css("opacity", "1");
+        }
+    });
+
+
     addTeamInfo(function() {
         $(".teamPhoto").hover(function() {
             $(this).css("cursor", "pointer");
