@@ -53,7 +53,7 @@ HEADER
 .btnContainer {
     position: absolute;
     z-index: 100;
-    bottom: 20vmin;
+    bottom: 15vmin;
     width: 100%;
     margin: 0 auto;
 }
@@ -81,16 +81,9 @@ HEADER
     margin: 0 auto;
 }
 
-/*.registerDiv input {
-    width: 30vw;
-    color: #000;
-    height: 50px;
-    font-size: 3vmin;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-radius: 0px;
-}*/
+.registerDiv > p {
+    margin-top: 200px;
+}
 
 .btnd:active, .btnd:focus, .btnd.active {
     background-image: none;
@@ -268,110 +261,6 @@ Footer Elements
 /*****************************
 Menu
 ******************************/
-
-/* ----------- iPhone 4 and 4S ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
-
-
-/* ----------- iPhone 5 and 5S ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
-
-
-/* ----------- iPhone 6 ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
-
-
-/* ----------- iPhone 6+ ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-    .dateContainer {
-        display: none;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {}
-
 
 .dateContainer {
     position: fixed;
