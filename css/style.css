@@ -67,8 +67,8 @@ HEADER
 }
 
 #mainLogo {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .registerDiv {
@@ -81,7 +81,7 @@ HEADER
     margin: 0 auto;
 }
 
-.registerDiv > p {
+.registerDiv> p {
     margin-top: 200px;
 }
 
@@ -95,7 +95,7 @@ HEADER
 .btn-xl {
     padding: 10px 20px;
     border-radius: 10px;
-    width:50%;
+    width: 50%;
     font-size: 3.5vmin;
 }
 
@@ -263,16 +263,29 @@ Menu
 ******************************/
 
 .dateContainer {
-    position: fixed;
-    z-index: 100;
-    left: 4em;
+    position: absolute;
+    z-index: 80;
+    left: 8em;
     margin-top: -1.3em;
     transition: opacity 0.4s ease;
 }
 
 .dateContainer img {
-  width: 148px;
-  height: 186px;
+    width: 148px;
+    height: 186px;
+}
+
+.donationContainer {
+    position: absolute;
+    z-index: 80;
+    right: 10em;
+    margin-top: -1.3em;
+    transition: opacity 0.4s ease;
+}
+
+.donationContainer img {
+    width: 148px;
+    height: 186px;
 }
 
 #menuBtn {
