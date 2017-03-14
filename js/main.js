@@ -93,31 +93,6 @@ $(document).ready(function() {
 
     }
 
-    var width = 80;
-    var height = 2;
-    var length = 40;
-    var girth = ((height * 2) + (width * 2));
-    var weight = 56;
-
-    if ((length + girth > 100) && (weight > 70)) {
-        document.getElementById("packageInfo").innerHTML = " The length of the box " + length + " inches, the width is " + width + " inches, and the height is " + height + " inches. The girth of the box is " + girth + ". The volume of the box is " + (length * width * height)
-        "."
-        document.getElementById("packageMessage").innerHTML = " The package is too large or too heavy. "
-    } else if ((length + girth <= 100) && (weight <= 70)) {
-        document.getElementById("packageInfo").innerHTML = " The length of the box " + length + " inches, the width is " + width + " inches, and the height is " + height + " inches. The girth of the box is " + girth + ". The volume of the box is " + (length * width * height)
-        "."
-        document.getElementById("packageMessage").innerHTML = " The package is acceptable. "
-    } else if ((length + girth > 100) && (weight <= 70)) {
-        document.getElementById("packageInfo").innerHTML = " The length of the box " + length + " inches, the width is " + width + " inches, and the height is " + height + " inches. The girth of the box is " + girth + ". The volume of the box is " + (length * width * height)
-        "."
-        document.getElementById("packageMessage").innerHTML = " The size of the package is ok, but the package is too heavy."
-    } else if ((length + girth <= 100) && (weight > 70)) {
-        document.getElementById("packageInfo").innerHTML = " The length of the box " + length + " inches, the width is " + width + " inches, and the height is " + height + " inches. The girth of the box is " + girth + ". The volume of the box is " + (length * width * height)
-        "."
-        document.getElementById("packageMessage").innerHTML = " The weight of the package is ok, but the package is too large. "
-
-    }
-
     /**function closeOverlay() {
         TweenMax.to($(".overlay"), 1, {
             display: "block",
