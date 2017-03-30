@@ -22,7 +22,6 @@ $(document).ready(function() {
         }
     });*/
 
-
     addTeamInfo(function() {
         $(".teamPhoto").hover(function() {
             $(this).css("cursor", "pointer");
