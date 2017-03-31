@@ -525,6 +525,45 @@
                 s.appendChild(qs, s)
             }
         })()
+
+        //SIDEBAR JS
+
+        var sidebarIsOpen = false;
+
+        $("#menuBtn").click(function(e) {
+            e.preventDefault();
+
+            if (sidebarIsOpen == false) {
+                sidebarIsOpen = true;
+            } else {
+                sidebarIsOpen = false;
+            }
+
+            controlSidebar();
+
+            $(this).toggleClass("active");
+
+        });
+
+        $("#sidebarCircle").click(function(e) {
+            e.preventDefault();
+            sidebarIsOpen = false;
+            controlSidebar();
+            $(".nav-toggle").removeClass("active");
+        });
+
+        function controlSidebar() {
+            if (!sidebarIsOpen) {
+                //Close
+                $(".sidebarContainer").css("right", "-50%");
+                $(".menuContainer").css("background", "black");
+            } else {
+                //Open
+                $(".sidebarContainer").css("right", "0%");
+                $(".menuContainer").css("background", "transparent");
+            }
+        }
+
     </script>
     <!--JQuery-->
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
@@ -533,7 +572,6 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <!--Custom JS-->
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/sidebar.js"></script>
 </body>
 
 </html>
