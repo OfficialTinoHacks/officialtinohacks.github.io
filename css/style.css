@@ -275,21 +275,9 @@ Menu
     height: 186px;
 }
 
-.donationContainer {
-    position: absolute;
-    z-index: 80;
-    right: 10em;
-    margin-top: -1.3em;
-    transition: opacity 0.4s ease;
-}
-
-.donationContainer img {
-    width: 148px;
-    height: 186px;
-}
-
 #menuBtn {
     cursor: pointer;
+    z-index: 10000;
 }
 
 .menuContainer {
@@ -308,7 +296,7 @@ Menu
     background-color: #0078D7;
     padding: 10px;
     position: fixed;
-    z-index: 100;
+    z-index: 10000;
     height: 100vh;
     right: -50%;
     top: 0em;
