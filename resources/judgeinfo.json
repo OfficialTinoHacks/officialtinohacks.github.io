@@ -2,7 +2,7 @@
     "name": "Prajakte Jagdale",
     "title": "Principal Red Team Engineer (IT)",
     "company": "Palo Alto Networks",
-    "img": "img/judges/placeholder.jpg"
+    "img": "img/judges/Prajakta Jagdale.jpeg"
 }, {
     "name": "Rinki Sethi",
     "title": "Sr. Director, IT",
@@ -13,4 +13,9 @@
     "title": "Software Engineer",
     "company": "eBay",
     "img": "img/judges/Ethan Rubinson.png"
+}, {
+    "name": "Raji Srikanthan",
+    "title": "Senior Software Engineer",
+    "company": "Salesforce",
+    "img": "img/judges/placeholder.jpg"
 }]
