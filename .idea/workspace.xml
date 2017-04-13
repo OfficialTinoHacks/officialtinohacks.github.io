@@ -98,8 +98,8 @@
       <file leaf-file-name="live.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/live.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="232" column="62" lean-forward="true" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
+            <state relative-caret-position="519">
+              <caret line="226" column="15" lean-forward="false" selection-start-line="226" selection-start-column="15" selection-end-line="226" selection-end-column="15" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -171,8 +171,8 @@
       <find>a {</find>
       <find>liveBx</find>
       <find>table</find>
-      <find>list-gro</find>
       <find>hours</find>
+      <find>list-gro</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -368,12 +368,12 @@
       <workItem from="1491959291205" duration="454000" />
       <workItem from="1491960122959" duration="158000" />
       <workItem from="1492032892570" duration="9321000" />
-      <workItem from="1492062872216" duration="7376000" />
+      <workItem from="1492062872216" duration="7597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33547000" />
+    <option name="totallyTimeSpent" value="33768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1385,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/live.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="232" column="62" lean-forward="true" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
+        <state relative-caret-position="519">
+          <caret line="226" column="15" lean-forward="false" selection-start-line="226" selection-start-column="15" selection-end-line="226" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

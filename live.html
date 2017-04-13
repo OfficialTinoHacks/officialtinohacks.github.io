@@ -190,6 +190,7 @@
 <script type="text/javascript" src="js/TweenMax.min.js"></script>
 
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+
 <script>
     var OneSignal = window.OneSignal || [];
     OneSignal.push(["init", {
@@ -209,6 +210,24 @@
         safari_web_id: 'web.onesignal.auto.26f438e4-4907-4b0f-9fba-4ab15d3b5c3b'
     }]);
 
+    OneSignal.push(function () {
+
+        OneSignal.on('notificationDisplay', function (notification) {
+            console.warn('OneSignal notification displayed:', event);
+            $("#liveFeed").prepend('<a href="#" class="list-group-item active"> <span class="badge">Just Now</span><h4 class="list-group-item-heading">' + notification.heading + '</h4><p class="list-group-item-text">' + notification.content + '</p></a>');
+            $("#liveFeed > a:nth-child(2)").removeClass("active");
+            /*
+             {
+             "id": "ce31de29-e1b0-4961-99ee-080644677cd7",
+             "heading": "OneSignal Test Message",
+             "content": "This is an example notification.",
+             "url": "https://onesignal.com?_osp=do_not_open",
+             "icon": "https://onesignal.com/images/notification_logo.png"
+             }
+             */
+        });
+    });
+
     $.ajax({
         url: "https://onesignal.com/api/v1/notifications?app_id=5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
         type: "GET",
@@ -227,27 +246,12 @@
         }
     });
 
-    OneSignal.on('notificationDisplay', function (notification) {
-        console.warn('OneSignal notification displayed:', event);
-        $("#liveFeed").prepend('<a href="#" class="list-group-item active"> <span class="badge">Just Now</span><h4 class="list-group-item-heading">' + notification.heading + '</h4><p class="list-group-item-text">' + notification.content + '</p></a>');
-        $("#liveFeed > a:nth-child(2)").removeClass("active");
-        /*
-         {
-         "id": "ce31de29-e1b0-4961-99ee-080644677cd7",
-         "heading": "OneSignal Test Message",
-         "content": "This is an example notification.",
-         "url": "https://onesignal.com?_osp=do_not_open",
-         "icon": "https://onesignal.com/images/notification_logo.png"
-         }
-         */
-    });
-
     function convertToCurrentTime(unix_timestamp) {
 
         var date = new Date(unix_timestamp * 1000);
         /*var hours = date.getHours();
-        var minutes = "0" + date.getMinutes();
-        var seconds = "0" + date.getSeconds();*/
+         var minutes = "0" + date.getMinutes();
+         var seconds = "0" + date.getSeconds();*/
 
         var current = new Date();
 
