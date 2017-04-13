@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TinoHacks</title>
+    <title>TinoHacks Live</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,10 +65,8 @@
         <br>
         <img class="center-block img-responsive" width="400" height="330" src="img/logos/tinohacks-live.png"/>
         <br>
-        <br>
         <h1>LIVE FEED</h1>
         <hr>
-        <br>
         <div class="row">
             <div style="max-height: 60vh; overflow-y: scroll;" class="col-md-12">
                 <div id="liveFeed" class="list-group">
@@ -80,7 +78,7 @@
         <br>
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <a target="_blank" href="http://tinohacks.tech">
                     <div style="background-color: #784CAD" class="liveBox">
                         <div class="content">
@@ -90,7 +88,7 @@
                 </a>
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <a target="_blank" href="http://tinohacks.tech">
                     <div style="background-color: #dddddd" class="liveBox">
                         <div class="content">
@@ -152,16 +150,80 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a target="_blank" href="http://tinohacks2017.devpost.com">
+                <a target="_blank" href="https://hardware.mlh.io">
                     <div style="background-color: #282E34" class="liveBox">
                         <div class="content">
                             <img class="img-responsive" style="max-width: 70%; max-height: 70%;"
-                                 src="img/logos/prizes.png"/>
+                                 src="img/logos/mlh-hardware.png"/>
                         </div>
                     </div>
                 </a>
             </div>
 
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <a target="_blank" href="https://products.wolframalpha.com/api/">
+                    <div style="background-color: #dd1100" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/logos/wolfram.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a target="_blank"
+                   href="https://docs.google.com/document/d/1ApgORhgKePksBhjvnLToAIbrrbzfNTtnlyjQ1tjtRpE/edit">
+                    <div style="background-color: #dbffe4" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/logos/dot-tech.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a target="_blank" href="https://clarifai.com">
+                    <div style="background-color: #dbedff" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/logos/clarifai.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a target="_blank" href="https://kloudless.com">
+                    <div style="background-color: #F1B244" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/sponsors/kloudless.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a target="_blank" href="https://twilio.com">
+                    <div style="background-color: #FFF" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/logos/twilio.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a target="_blank" href="https://jetbrains.com">
+                    <div style="background-color: #161616" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 75%; max-height: 75%;"
+                                 src="img/sponsors/jetbrains.svg"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -350,7 +412,7 @@
 
         }
         else if (hourDiff >= 1) {
-            if (minutes > 0) {
+            if (minutesDiff > 0) {
                 return "1 hour, " + (minutesDiff - (60 * hourDiff)) + " mins ago"
             } else {
                 return "1 hour ago"
