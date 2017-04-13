@@ -172,6 +172,14 @@ Q&A
     border: 1px solid #000;
 }
 
+.liveContainer {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #000;
+}
+
 .feature:hover {
     background-color: #FFF;
     color: black;
@@ -324,6 +332,50 @@ Menu
     cursor: pointer;
 }
 
+a {
+    cursor: pointer;
+}
+
+.liveBox {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 10px 10px black;
+    background-color: #073d55;
+    width: 100%;
+}
+
+.liveBox:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+
+.liveBox:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    padding-top: 20%;
+}
+
+.content > img {
+    max-height: 50%;
+    max-width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 .sidebarContainer ul a {
     color: #FFF;
     text-decoration: none;
@@ -401,6 +453,18 @@ Menu
     right: 0;
     z-index: -1;
     -webkit-backface-visibility: hidden
+}
+
+.liveTd {
+    vertical-align: middle;
+    height: 100px;
+    line-height: 300px;
+}
+
+.liveTd > p {
+    vertical-align: middle;
+    height: 100px;
+    line-height: 100px;
 }
 
 .diagonal:before {
