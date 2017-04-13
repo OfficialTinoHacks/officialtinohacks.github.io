@@ -227,12 +227,27 @@
         }
     });
 
+    OneSignal.on('notificationDisplay', function (notification) {
+        console.warn('OneSignal notification displayed:', event);
+        $("#liveFeed").prepend('<a href="#" class="list-group-item active"> <span class="badge">Just Now</span><h4 class="list-group-item-heading">' + notification.heading + '</h4><p class="list-group-item-text">' + notification.content + '</p></a>');
+        $("#liveFeed > a:nth-child(2)").removeClass("active");
+        /*
+         {
+         "id": "ce31de29-e1b0-4961-99ee-080644677cd7",
+         "heading": "OneSignal Test Message",
+         "content": "This is an example notification.",
+         "url": "https://onesignal.com?_osp=do_not_open",
+         "icon": "https://onesignal.com/images/notification_logo.png"
+         }
+         */
+    });
+
     function convertToCurrentTime(unix_timestamp) {
 
         var date = new Date(unix_timestamp * 1000);
-        var hours = date.getHours();
+        /*var hours = date.getHours();
         var minutes = "0" + date.getMinutes();
-        var seconds = "0" + date.getSeconds();
+        var seconds = "0" + date.getSeconds();*/
 
         var current = new Date();
 

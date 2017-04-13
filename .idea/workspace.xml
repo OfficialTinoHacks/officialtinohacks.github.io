@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf1c376-777c-4ba5-9347-c28ad8882f4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/live.js" afterPath="$PROJECT_DIR$/js/live.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/live.html" afterPath="$PROJECT_DIR$/live.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -99,8 +98,8 @@
       <file leaf-file-name="live.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/live.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="373" column="27" lean-forward="false" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="27" />
+            <state relative-caret-position="414">
+              <caret line="232" column="62" lean-forward="true" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -173,6 +172,7 @@
       <find>liveBx</find>
       <find>table</find>
       <find>list-gro</find>
+      <find>hours</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -368,12 +368,12 @@
       <workItem from="1491959291205" duration="454000" />
       <workItem from="1491960122959" duration="158000" />
       <workItem from="1492032892570" duration="9321000" />
-      <workItem from="1492062872216" duration="6713000" />
+      <workItem from="1492062872216" duration="7376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32884000" />
+    <option name="totallyTimeSpent" value="33547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1385,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/live.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="373" column="27" lean-forward="false" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="27" />
+        <state relative-caret-position="414">
+          <caret line="232" column="62" lean-forward="true" selection-start-line="232" selection-start-column="62" selection-end-line="232" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
