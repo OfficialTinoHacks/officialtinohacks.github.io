@@ -174,7 +174,7 @@
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
-            autoRegister: false,
+            autoRegister: true,
             /* Set to true to automatically prompt visitors */
             subdomainName: 'tinohacks',
             /*
@@ -182,9 +182,6 @@
             */
             httpPermissionRequest: {
                 enable: true
-            },
-            notifyButton: {
-                enable: true /* Set to false to hide */
             },
             safari_web_id: 'web.onesignal.auto.26f438e4-4907-4b0f-9fba-4ab15d3b5c3b'
         }]);
