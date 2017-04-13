@@ -7,26 +7,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
+    <meta name="description"
+          content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
     <meta name="author" content="The Tino Hacks Team">
     <!--Mobile App Compatibility-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="TinoHacks">
-    <meta itemprop="description" content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
+    <meta itemprop="description"
+          content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
     <meta itemprop="image" content="img/icons/apple-touch-icon-180x180.png">
     <!--Facebook Open Graph Data-->
-    <meta property="og:title" content="TinoHacks" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="img/icons/apple-touch-icon-180x180.png" />
-    <meta property="og:url" content="http://tinohacks.tech" />
-    <meta property="og:description" content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time." />
+    <meta property="og:title" content="TinoHacks"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="img/icons/apple-touch-icon-180x180.png"/>
+    <meta property="og:url" content="http://tinohacks.tech"/>
+    <meta property="og:description"
+          content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time."/>
     <!--Twitter Card Data-->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://tinohacks.tech">
     <meta name="twitter:title" content="TinoHacks">
-    <meta name="twitter:description" content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
+    <meta name="twitter:description"
+          content="TinoHacks, a project of Hacker Fund, is a two day hackathon on April 15-16, 2017 where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time.">
     <meta name="twitter:image" content="img/icons/apple-touch-icon-180x180.png">
     <!--Website Favicon-->
     <link rel="icon" href="img/icons/favicon.ico">
@@ -53,144 +57,326 @@
 
 <body>
 
-    <div class="diagonal liveDiv" id="about" style="position: relative; z-index: 1; color: #000;background-color:white;text-align:center;text-align: justify;">
-        <div class="container">
-            <br>
-            <img class="center-block img-responsive" width="200" height="130" src="img/logos/mylogo.png" />
-            <br>
-            <img class="center-block img-responsive" width="400" height="330" src="img/logos/tinohacks-live.png" />
-            <br>
-            <br>
-            <h1>LIVE FEED</h1>
-            <h1>ANNOUNCEMENTS</h1>
-            <div class="row">
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech">
-                        <div style="background-color: #784CAD" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" src="img/logos/home.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
+<div class="diagonal liveDiv" id="about"
+     style="position: relative; z-index: 1; color: #000;background-color:white;text-align:center;text-align: justify;">
+    <div class="container">
+        <br>
+        <img class="center-block img-responsive" width="200" height="130" src="img/logos/mylogo.png"/>
+        <br>
+        <img class="center-block img-responsive" width="400" height="330" src="img/logos/tinohacks-live.png"/>
+        <br>
+        <br>
+        <h1>LIVE FEED</h1>
+        <hr>
+        <br>
+        <div class="row">
+            <div style="max-height: 60vh; overflow-y: scroll;" class="col-md-12">
+                <div id="liveFeed" class="list-group">
 
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech">
-                        <div style="background-color: #dddddd" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" src="img/logos/apple.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech">
-                        <div style="background-color: #A4C639" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" src="img/logos/android.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks2017.devpost.com">
-                        <div style="background-color:#003E54" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" style="max-width: 70%; max-height: 70%;" src="img/logos/devpost.png" />
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <br>
+        <br>
 
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech#schedule">
-                        <div style="background-color: #2D8FDE" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" style="max-width: 80%; max-height: 80%;" src="img/logos/schedule.png" />
-                            </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech">
+                    <div style="background-color: #784CAD" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" src="img/logos/home.png"/>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech/#judges">
-                        <div style="background-color: #fce700" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" style="max-width: 70%; max-height: 70%;" src="img/logos/judges.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks.tech#sponsors">
-                        <div style="background-color: #FF5F31" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" style="max-width: 70%; max-height: 70%;" src="img/logos/sponsors.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a target="_blank" href="http://tinohacks2017.devpost.com">
-                        <div style="background-color: #282E34" class="liveBox">
-                            <div class="content">
-                                <img class="img-responsive" style="max-width: 70%; max-height: 70%;" src="img/logos/prizes.png" />
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+            </div>
 
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech">
+                    <div style="background-color: #dddddd" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" src="img/logos/apple.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech">
+                    <div style="background-color: #A4C639" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" src="img/logos/android.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks2017.devpost.com">
+                    <div style="background-color:#003E54" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 70%; max-height: 70%;"
+                                 src="img/logos/devpost.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech#schedule">
+                    <div style="background-color: #2D8FDE" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 80%; max-height: 80%;"
+                                 src="img/logos/schedule.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech/#judges">
+                    <div style="background-color: #fce700" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 70%; max-height: 70%;"
+                                 src="img/logos/judges.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks.tech#sponsors">
+                    <div style="background-color: #FF5F31" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 70%; max-height: 70%;"
+                                 src="img/logos/sponsors.png"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="http://tinohacks2017.devpost.com">
+                    <div style="background-color: #282E34" class="liveBox">
+                        <div class="content">
+                            <img class="img-responsive" style="max-width: 70%; max-height: 70%;"
+                                 src="img/logos/prizes.png"/>
+                        </div>
+                    </div>
+                </a>
             </div>
 
         </div>
 
     </div>
 
-    <footer>
-        <div style="position: relative; z-index: -1;">
-            <div style="color:#000;background-color:#FFF;text-align:center;padding:50px 80px;text-align: justify;">
-                <div class="row">
-                    <h1 class="text-center">Made with <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> by
+</div>
+
+<footer>
+    <div style="position: relative; z-index: -1;">
+        <div style="color:#000;background-color:#FFF;text-align:center;padding:50px 80px;text-align: justify;">
+            <div class="row">
+                <h1 class="text-center">Made with <i style="color: red" class="fa fa-heart" aria-hidden="true"></i> by
                     TinoHacks</h1>
-                </div>
-                <br/>
-                <p class="text-center">Website Designed by Sriharsha Guduguntla</p>
-                <p class="text-center">&copy; TinoHacks 2017</p>
             </div>
+            <br/>
+            <p class="text-center">Website Designed by Sriharsha Guduguntla</p>
+            <p class="text-center">&copy; TinoHacks 2017</p>
         </div>
-    </footer>
-    <!--JQuery-->
-    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <!--Bootstrap JS-->
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <!--TweenMax JS-->
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <!--Custom JS-->
-    <script type="text/javascript" src="js/live.js"></script>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
-    <script>
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(["init", {
-            appId: "5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
-            autoRegister: true,
-            /* Set to true to automatically prompt visitors */
-            subdomainName: 'tinohacks',
-            /*
-            subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
-            */
-            httpPermissionRequest: {
-                enable: true
-            },
-            notifyButton: {
-                enable: true /* Set to false to hide */
-            },
-            safari_web_id: 'web.onesignal.auto.26f438e4-4907-4b0f-9fba-4ab15d3b5c3b'
-        }]);
-    </script>
+    </div>
+</footer>
+<!--JQuery-->
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<!--Bootstrap JS-->
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!--TweenMax JS-->
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
 
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+<script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+        appId: "5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
+        autoRegister: true,
+        /* Set to true to automatically prompt visitors */
+        subdomainName: 'tinohacks',
+        /*
+         subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+         */
+        httpPermissionRequest: {
+            enable: true
+        },
+        notifyButton: {
+            enable: true /* Set to false to hide */
+        },
+        safari_web_id: 'web.onesignal.auto.26f438e4-4907-4b0f-9fba-4ab15d3b5c3b'
+    }]);
 
+    $.ajax({
+        url: "https://onesignal.com/api/v1/notifications?app_id=5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
+        type: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Basic NjA3NWVhZGItNmU5OS00ODc2LWE3NzEtYTA2OTMwMTU1YmMz");
+        },
+        success: function (result) {
+
+            result.notifications.forEach(function (notification) {
+                $("#liveFeed").append('<a href="#" class="list-group-item"> <span class="badge">' + convertToCurrentTime(notification.queued_at) + '</span><h4 class="list-group-item-heading">' + notification.headings.en + '</h4><p class="list-group-item-text">' + notification.contents.en + '</p></a>');
+            });
+
+            $("#liveFeed > a:nth-child(1)").addClass("active");
+
+            console.log(result);
+        }
+    });
+
+    function convertToCurrentTime(unix_timestamp) {
+
+        var date = new Date(unix_timestamp * 1000);
+        var hours = date.getHours();
+        var minutes = "0" + date.getMinutes();
+        var seconds = "0" + date.getSeconds();
+
+        var current = new Date();
+
+        var DateDiff = {
+
+            inSeconds: function (d1, d2) {
+                var t2 = date.getTime();
+                var t1 = current.getTime();
+
+                return Math.abs(parseInt((t2 - t1) / (1000)));
+            },
+
+            inMinutes: function (d1, d2) {
+                var t2 = date.getTime();
+                var t1 = current.getTime();
+
+                return Math.abs(parseInt((t2 - t1) / (60 * 1000)));
+            },
+
+            inHours: function (d1, d2) {
+                var t2 = date.getTime();
+                var t1 = current.getTime();
+
+                return Math.abs(parseInt((t2 - t1) / (3600 * 1000)));
+            },
+
+            inDays: function (d1, d2) {
+                var t2 = date.getTime();
+                var t1 = current.getTime();
+
+                return Math.abs(parseInt((t2 - t1) / (24 * 3600 * 1000)));
+            },
+
+            inWeeks: function (d1, d2) {
+                var t2 = date.getTime();
+                var t1 = current.getTime();
+
+                return Math.abs(parseInt((t2 - t1) / (24 * 3600 * 1000 * 7)));
+            },
+
+            inMonths: function (d1, d2) {
+                var d1Y = current.getFullYear();
+                var d2Y = date.getFullYear();
+                var d1M = current.getMonth();
+                var d2M = date.getMonth();
+
+                return Math.abs((d2M + 12 * d2Y) - (d1M + 12 * d1Y));
+            },
+
+            inYears: function (d1, d2) {
+                return date.getFullYear() - current.getFullYear();
+            }
+        }
+
+        //var formattedTime = ((hours > 12) ? hours - 12 : hours) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+        var yearDiff = DateDiff.inYears(current, date);
+        var monthDiff = DateDiff.inMonths(current, date);
+        var weekDiff = DateDiff.inWeeks(current, date);
+        var dayDiff = DateDiff.inDays(current, date);
+        var hourDiff = DateDiff.inHours(current, date);
+        var minutesDiff = DateDiff.inMinutes(current, date);
+        var secondsDiff = DateDiff.inSeconds(current, date);
+
+        if (yearDiff >= 2) {
+            return yearDiff + " years ago";
+        }
+        else if (yearDiff >= 1) {
+            return "1 year ago";
+        }
+        else if (monthDiff >= 2) {
+            return monthDiff + " months ago"
+        }
+        else if (monthDiff >= 1) {
+
+            return "1 month ago";
+
+        }
+        else if (weekDiff >= 2) {
+            return weekDiff + " weeks ago"
+        }
+        else if (weekDiff >= 1) {
+            return "1 week ago"
+
+        }
+        else if (dayDiff >= 2) {
+            return dayDiff + " days ago"
+        }
+        else if (dayDiff >= 1) {
+            return "1 day ago"
+
+        }
+        else if (hourDiff >= 2) {
+
+            return hourDiff + " hours ago"
+
+        }
+        else if (hourDiff >= 1) {
+            if (minutes > 0) {
+                return "1 hour, " + (minutesDiff - (60 * hourDiff)) + " mins ago"
+            } else {
+                return "1 hour ago"
+            }
+        } else if (minutesDiff >= 2) {
+
+            return minutesDiff + " mins ago"
+
+        } else if (minutesDiff >= 1) {
+
+            return "1 minute ago"
+
+        } else if (secondsDiff >= 2) {
+
+            return secondsDiff + " secs ago"
+
+        } else if (secondsDiff >= 1) {
+
+            return "1 second ago"
+
+        }
+
+        return "Just Now"
+
+    }
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85079333-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!--Custom JS-->
+<script type="text/javascript" src="js/live.js"></script>
 
 </body>
 
