@@ -17,7 +17,6 @@ FONTS
     src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
-
 /*****************************
 ELEMENTS
 ******************************/
@@ -44,7 +43,6 @@ body, html {
     min-height: 100%;
     z-index: 0;
 }
-
 
 /*****************************
 HEADER
@@ -81,7 +79,7 @@ HEADER
     margin: 0 auto;
 }
 
-.registerDiv> p {
+.registerDiv > p {
     margin-top: 200px;
 }
 
@@ -155,7 +153,6 @@ HEADER
     }
 }
 
-
 /*****************************
 Q&A
 ******************************/
@@ -186,7 +183,6 @@ Q&A
     transition: background-color 0.4s ease;
 }
 
-
 /*****************************
 Team Members
 ******************************/
@@ -206,7 +202,6 @@ h1, h2, h3, h4, h5, h6 {
     font: 4vmin "thinHelvetica", sans-serif;
     font-weight: 200;
 }
-
 
 /*****************************
 Footer Elements
@@ -264,7 +259,6 @@ Footer Elements
     margin-top: 20px;
     color: white;
 }
-
 
 /*****************************
 Menu
@@ -374,6 +368,92 @@ a {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #784CAD;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#page {
+    display: none;
+    text-align: center;
+}
+
+#countdown-timer {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 3em;
+}
+
+.badge {
+    background: none;
+    color: gray;
+}
+
+.list-group-item {
+    border-right: none;
+    border-left: none;
 }
 
 .sidebarContainer ul a {
