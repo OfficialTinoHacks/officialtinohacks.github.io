@@ -63,17 +63,18 @@
 
     <div class="diagonal liveDiv" id="about"
          style="position: relative; z-index: 1; color: #000;background-color:white;text-align:center;text-align: justify;">
+
         <div class="container">
+
             <br>
             <img class="center-block img-responsive" width="200" height="130" src="img/logos/mylogo.png"/>
             <br>
             <img class="center-block img-responsive" width="400" height="330" src="img/logos/tinohacks-live.png"/>
-            <br>
 
-            <h1 class="text-center">Hacking Time Left: </h1>
-            <h1 class="text-center" id="countdown-timer"></h1>
-
-            <br/>
+            <div class="center-block" id="hackingTime">
+                <h1 class="text-center">HACKING TIME LEFT: </h1>
+                <h1 class="text-center" id="countdown-timer"></h1>
+            </div>
 
             <h1>LIVE FEED</h1>
             <hr>
@@ -265,6 +266,7 @@
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
 
 <script>
+
     var myVar;
 
     function myFunction() {

@@ -559,6 +559,14 @@ a {
     transform-origin: 100%
 }
 
+#hackingTime {
+    z-index: 1000;
+    padding: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 table tr {
     height: 30px;
     font-size: 1.3em;
