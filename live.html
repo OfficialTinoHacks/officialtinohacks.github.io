@@ -325,7 +325,7 @@
 
             result.notifications.forEach(function (notification) {
 
-                if (notification.headings.en && notification.content.en) {
+                if (notification.headings.en && notification.contents.en) {
                     $("#liveFeed").append('<a href="#" class="list-group-item"> <span class="badge">' + convertToCurrentTime(notification.queued_at) + '</span><h4 class="list-group-item-heading">' + notification.headings.en + '</h4><p class="list-group-item-text">' + notification.contents.en + '</p></a>');
                 }
             });
