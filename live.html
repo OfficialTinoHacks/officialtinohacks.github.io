@@ -321,14 +321,17 @@
             xhr.setRequestHeader("Authorization", "Basic NjA3NWVhZGItNmU5OS00ODc2LWE3NzEtYTA2OTMwMTU1YmMz");
         },
         success: function (result) {
+            console.log("Result: ", result);
 
             result.notifications.forEach(function (notification) {
-                $("#liveFeed").append('<a href="#" class="list-group-item"> <span class="badge">' + convertToCurrentTime(notification.queued_at) + '</span><h4 class="list-group-item-heading">' + notification.headings.en + '</h4><p class="list-group-item-text">' + notification.contents.en + '</p></a>');
+
+                if (notification.headings.en && notification.content.en) {
+                    $("#liveFeed").append('<a href="#" class="list-group-item"> <span class="badge">' + convertToCurrentTime(notification.queued_at) + '</span><h4 class="list-group-item-heading">' + notification.headings.en + '</h4><p class="list-group-item-text">' + notification.contents.en + '</p></a>');
+                }
             });
 
             $("#liveFeed > a:nth-child(1)").addClass("active");
 
-            console.log(result);
         }
     });
 
