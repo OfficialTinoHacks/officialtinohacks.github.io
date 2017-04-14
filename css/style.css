@@ -446,6 +446,20 @@ a {
     font-size: 3em;
 }
 
+.badge {
+    background: none;
+    color: gray;
+}
+
+.list-group-item {
+    border-right: none;
+    border-left: none;
+}
+
+.list-group-item-text {
+    color: gray;
+}
+
 .sidebarContainer ul a {
     color: #FFF;
     text-decoration: none;
