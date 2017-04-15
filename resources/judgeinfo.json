@@ -23,4 +23,14 @@
     "title": "Director of IT and Facilities",
     "company": "Edmodo",
     "img": "img/judges/Allison Laureano.jpg"
+}, {
+    "name": "Raj Nagarajan",
+    "title": "Director of Engineering",
+    "company": "eBay",
+    "img": "img/judges/Raj Nagarajan.jpg"
+},{
+    "name": "Chris Ngo",
+    "title": "iOS Instructor",
+    "company": "Makeschool",
+    "img": "img/judges/Chris Ngo.jpg"
 }]

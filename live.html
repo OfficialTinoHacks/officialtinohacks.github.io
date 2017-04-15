@@ -314,6 +314,8 @@
         });
     });
 
+    $.ajaxSetup({cache: false});
+
     $.ajax({
         url: "https://onesignal.com/api/v1/notifications?app_id=5cadea32-dc9c-4aaf-bf7d-313aab2289d0",
         type: "GET",
