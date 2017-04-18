@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf1c376-777c-4ba5-9347-c28ad8882f4d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8450">
-              <caret line="610" column="50" lean-forward="true" selection-start-line="610" selection-start-column="50" selection-end-line="610" selection-end-column="50" />
+            <state relative-caret-position="252">
+              <caret line="318" column="99" lean-forward="false" selection-start-line="318" selection-start-column="99" selection-end-line="318" selection-end-column="99" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -189,7 +189,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Donate Now</find>
       <find>menuBtn</find>
       <find>jetbrains</find>
       <find>animate</find>
@@ -219,6 +218,7 @@
       <find>hackp</find>
       <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</find>
       <find>=======</find>
+      <find>makeschool</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,8 +233,8 @@
         <option value="$PROJECT_DIR$/css/responsive.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/resources/judgeinfo.json" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/live.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -441,12 +441,12 @@
       <workItem from="1492333463851" duration="205000" />
       <workItem from="1492347216090" duration="70000" />
       <workItem from="1492371629962" duration="182000" />
-      <workItem from="1492554410191" duration="26000" />
+      <workItem from="1492554410191" duration="149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56024000" />
+    <option name="totallyTimeSpent" value="56147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1424,8 +1424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8450">
-          <caret line="610" column="50" lean-forward="true" selection-start-line="610" selection-start-column="50" selection-end-line="610" selection-end-column="50" />
+        <state relative-caret-position="252">
+          <caret line="318" column="99" lean-forward="false" selection-start-line="318" selection-start-column="99" selection-end-line="318" selection-end-column="99" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
