@@ -110,8 +110,8 @@
                 Silicon Valley</a>, Fremont, CA</p>
             <br>
             <div class="col-md-12">
-                <a style="font-size: 4vmin;" class="btn btn-default btn-xl center-block"
-                href="/live" target="_blank">Visit Live Site</a>
+                <a style="font-size: 4vmin;" class="btn btn-default btn-xl center-block typeform-share button"
+                   href="https://tinohacks.typeform.com/to/Gn4ynj" data-mode="popup" target="_blank">Leave Feedback</a>
             </div>
         </div>
     </div>
@@ -317,8 +317,8 @@
         </div>
         <div style="margin-top: 50px;" class="col-md-4">
             <a target="_blank" href="https://makeschool.com/"><img src="img/sponsors/makeschool.PNG"
-                                                                class="img-responsive center-block" width="200"
-                                                                height="100"/></a>
+                                                                   class="img-responsive center-block" width="200"
+                                                                   height="100"/></a>
         </div>
 
     </div>
@@ -651,6 +651,18 @@
 
     ga('create', 'UA-85079333-1', 'auto');
     ga('send', 'pageview');
+
+    (function () {
+        var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName,
+            id = "typef_orm_share", b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/";
+        if (!gi.call(d, id)) {
+            js = ce.call(d, "script");
+            js.id = id;
+            js.src = b + "share.js";
+            q = gt.call(d, "script")[0];
+            q.parentNode.insertBefore(js, q)
+        }
+    })()
 
     //SIDEBAR JS
 
