@@ -17,9 +17,48 @@ FONTS
     src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
+
 /*****************************
 ELEMENTS
 ******************************/
+
+.nav-pills > li > a {
+    height: 50px;
+    color: black !important;
+    border-bottom: 1px solid #ececec;
+    border-radius: 10px;
+}
+
+.nav-pills {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.nav-pills li.active > a {
+    background-color: #a06acc !important;
+    color: white !important;
+}
+
+.frame {
+    white-space: nowrap;
+    /* this is required unless you put the helper span closely near the img */
+    height: 20%;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#titleLogo {
+    vertical-align: middle;
+    margin: 0 auto;
+    position: relative;
+
+}
 
 body, html {
     height: 100%;
@@ -28,12 +67,10 @@ body, html {
     font-weight: 200;
     font-size: 1em;
     color: #777;
-    overflow: none;
+    overflow-x: none;
 }
 
 .bgimg-1 {
-    position: relative;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,6 +80,7 @@ body, html {
     min-height: 100%;
     z-index: 0;
 }
+
 
 /*****************************
 HEADER
@@ -59,14 +97,13 @@ HEADER
 .logoContainer {
     position: absolute;
     z-index: 1;
-    bottom: 15vmin;
+    bottom: 100vmin;
     width: 100%;
     margin: 0 auto;
 }
 
 #mainLogo {
-    max-width: 100%;
-    height: auto;
+    width: 50px;
 }
 
 .registerDiv {
@@ -79,7 +116,7 @@ HEADER
     margin: 0 auto;
 }
 
-.registerDiv > p {
+.registerDiv>p {
     margin-top: 200px;
 }
 
@@ -99,18 +136,41 @@ HEADER
 
 .btn-default {
     text-align: center;
-    background: transparent !important;
-    color: #FFF;
-    border: 1px solid white;
+    background: #f5f5f5;
+    color: #000;
+    padding: 15px;
+    letter-spacing: 6px;
+    border: none;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 25vw;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.skew-left {
+    transform: skew(-20deg);
+}
+
+.skew-right {
+    transform: skew(20deg);
+}
+
+.skew-fix-left {
+    display: inline-block;
+    transform: skew(20deg);
+}
+
+.skew-fix-right {
+    display: inline-block;
+    transform: skew(-20deg);
 }
 
 .btn-default:hover {
-    background-color: #FFF !important;
+    background-color: white;
     -webkit-transition: background-color 0.5s ease, color 0.5s ease;
     /* Safari */
     transition: background-color 0.5s ease, color 0.5s ease;
-    color: #000;
-    border: 1px solid white;
 }
 
 .scrollArrow {
@@ -153,6 +213,7 @@ HEADER
     }
 }
 
+
 /*****************************
 Q&A
 ******************************/
@@ -164,9 +225,10 @@ Q&A
 .iconContainer {
     width: 200px;
     height: 200px;
-    background-color: #000;
-    color: #FFF;
-    border: 1px solid #000;
+    background-color: #f5f5f5;
+    color: #4b4b4b;
+    border: 1px solid #f5f5f5;
+    position: relative;
 }
 
 .liveContainer {
@@ -182,6 +244,7 @@ Q&A
     color: black;
     transition: background-color 0.4s ease;
 }
+
 
 /*****************************
 Team Members
@@ -202,6 +265,7 @@ h1, h2, h3, h4, h5, h6 {
     font: 4vmin "thinHelvetica", sans-serif;
     font-weight: 200;
 }
+
 
 /*****************************
 Footer Elements
@@ -255,10 +319,27 @@ Footer Elements
     transition: background-color 0.3s ease;
 }
 
+.flickr {
+    height: 60px;
+    width: 60px;
+    background-color: #ff0084;
+    border-radius: 50%;
+    font-size: 22px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.flickr:hover {
+    background-color: #da0070;
+    transition: background-color 0.3s ease;
+}
+
 .social-media i {
     margin-top: 20px;
     color: white;
 }
+
 
 /*****************************
 Menu
@@ -273,8 +354,8 @@ Menu
 }
 
 .dateContainer img {
-    width: 148px;
-    height: 186px;
+    width: 107.8px;
+    height: 200px;
 }
 
 #menuBtn {
@@ -326,8 +407,13 @@ Menu
     cursor: pointer;
 }
 
+a.btn {
+    color: black !important;
+}
+
 a {
     cursor: pointer;
+    color: #ececec !important;
 }
 
 .liveBox {
@@ -359,7 +445,7 @@ a {
     padding-top: 20%;
 }
 
-.content > img {
+.content>img {
     max-height: 50%;
     max-width: 50%;
     position: absolute;
@@ -405,7 +491,9 @@ a {
     }
 }
 
+
 /* Add animation to "page content" */
+
 .animate-bottom {
     position: relative;
     -webkit-animation-name: animatebottom;
@@ -545,7 +633,7 @@ a {
     line-height: 300px;
 }
 
-.liveTd > p {
+.liveTd>p {
     vertical-align: middle;
     height: 100px;
     line-height: 100px;
@@ -560,7 +648,7 @@ a {
 .diagonal:after {
     bottom: 0;
     transform: skewY(-3deg);
-    transform-origin: 100%
+    transform-origin: 100%;
 }
 
 #hackingTime {
@@ -571,16 +659,71 @@ a {
     right: 0px;
 }
 
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+#notifyEmail {
+  width: 40vw;
+  color: #000;
+  height: 50px;
+  font-size: 3vmin;
+  text-align: center;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #4a4a4a;
+  background: none;
+
+}
+
 table tr {
     height: 30px;
     font-size: 1.3em;
 }
 
 .teamPhoto {
-    box-shadow: 5px 0px 20px black;
+    box-shadow: 0px 5px 5px black;
     z-index: 200;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-size: cover;
     background-position: center;
 }
