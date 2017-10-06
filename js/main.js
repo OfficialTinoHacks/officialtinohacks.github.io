@@ -47,7 +47,7 @@ $(document).ready(function() {
             }, {
                 backgroundImage: "url(img/faq/tinohacks5.jpg)",
                 title: "Who can attend?",
-                text: "This event is open to high schoolers only. However, college students may sign up to mentor, volunteer, or lead a workshop. Sign up here, or email <strong><a style='color: #377bb5 !important' href='mailto:hello@tinohacks.tech'>hello@tinohacks.tech</a></strong> if you have any questions or concerns."
+                text: "This event is open to high schoolers ONLY. No middle schoolers will be allowed. However, college students may sign up to mentor, volunteer, or lead a workshop. Sign up here, or email <strong><a style='color: #377bb5 !important' href='mailto:hello@tinohacks.tech'>hello@tinohacks.tech</a></strong> if you have any questions or concerns."
             }, {
                 backgroundImage: "url(img/faq/tinohacks6.jpg)",
                 title: "Do I need to stay overnight?",
