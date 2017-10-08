@@ -35,7 +35,7 @@ $(document).ready(function() {
             }, {
                 backgroundImage: "url(img/faq/tinohacks2.jpg)",
                 title: "Time and Location?",
-                text: "Time and location are TBD. Thanks to our sponsors, this event is completely free! This includes all the food, swag, and fantabulous prizes."
+                text: "TinoHacks will be taking place on the weekend of April 7-8, 2018 and location is TBD. Thanks to our sponsors, this event is completely free! This includes all the food, swag, and fantabulous prizes."
             }, {
                 backgroundImage: "url(img/faq/tinohacks3.jpg)",
                 title: "Do I need programming experience?",
