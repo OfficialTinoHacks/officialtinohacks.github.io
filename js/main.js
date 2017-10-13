@@ -27,7 +27,7 @@ $(document).ready(function() {
             {
                 backgroundImage: "url(img/logo-small.png)",
                 title: "What is TinoHacks?",
-                text: "TinoHacks II is a two day long, 350 person hackathon hosted by Cupertino High School students where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time. TinoHacks I happened on April 15-16, 2017, and TinoHacks is coming back on April 7-8, 2018 with our second event! It is backed by Hack +, a 501 (c)(3)public charity registered in CA. All donations are tax - deductible. Please feel free to email us at <strong><a style='color: #377bb5 !important' href='mailto:hello@tinohacks.tech'>hello@tinohacks.tech</a></strong> if you have any questions or concerns."
+                text: "TinoHacks II is a two day long, 350 person hackathon hosted by Cupertino High School students where both new and experienced programmers can work together on projects, learn new skills, and have a splendid time. TinoHacks I happened on April 15-16, 2017, and TinoHacks is coming back on April 14-15, 2018 with our second event! It is backed by Hack +, a 501 (c)(3)public charity registered in CA. All donations are tax - deductible. Please feel free to email us at <strong><a style='color: #377bb5 !important' href='mailto:hello@tinohacks.tech'>hello@tinohacks.tech</a></strong> if you have any questions or concerns."
             }, {
                 backgroundImage: "url(img/faq/tinohacks1.jpg)",
                 title: "What is a hackathon?",
@@ -35,7 +35,7 @@ $(document).ready(function() {
             }, {
                 backgroundImage: "url(img/faq/tinohacks2.jpg)",
                 title: "Time and Location?",
-                text: "TinoHacks will be taking place on the weekend of April 7-8, 2018 and location is TBD. Thanks to our sponsors, this event is completely free! This includes all the food, swag, and fantabulous prizes."
+                text: "TinoHacks will be taking place on the weekend of April 14-15, 2018 and location is TBD. Thanks to our sponsors, this event is completely free! This includes all the food, swag, and fantabulous prizes."
             }, {
                 backgroundImage: "url(img/faq/tinohacks3.jpg)",
                 title: "Do I need programming experience?",
