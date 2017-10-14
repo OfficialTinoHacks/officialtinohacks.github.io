@@ -18,6 +18,9 @@
     #menuBtn {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
 
 }
 
@@ -29,6 +32,9 @@
         display: none;
     }
     .registerDiv p {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     #hackingTime {
@@ -46,6 +52,9 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -74,6 +83,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -94,6 +106,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -112,6 +127,9 @@
         display: none;
     }
     .registerDiv p {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     #hackingTime {
@@ -137,6 +155,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -152,6 +173,9 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -177,6 +201,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -197,6 +224,9 @@
     .dateContainer {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     .registerDiv p {
         display: none;
     }
@@ -215,6 +245,9 @@
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -240,6 +273,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -263,6 +299,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -281,6 +320,9 @@
         display: none;
     }
     .registerDiv p {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     #hackingTime {
@@ -303,6 +345,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -321,6 +366,9 @@
 
 @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -343,6 +391,9 @@
     .dateContainer {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     .registerDiv p {
         display: none;
     }
@@ -361,6 +412,9 @@
 
 @media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -386,6 +440,9 @@
     .dateContainer {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     .registerDiv p {
         display: none;
     }
@@ -404,6 +461,9 @@
 
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
     .dateContainer {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     .registerDiv p {
@@ -427,6 +487,9 @@
         display: none;
     }
     .registerDiv p {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     #hackingTime {
@@ -452,6 +515,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -472,6 +538,9 @@
     .registerDiv p {
         display: none;
     }
+    #mlh-trust-badge {
+        display: none;
+    }
     #hackingTime {
         position: relative;
         top: 100px;
@@ -490,6 +559,9 @@
         display: none;
     }
     .registerDiv p {
+        display: none;
+    }
+    #mlh-trust-badge {
         display: none;
     }
     #hackingTime {
