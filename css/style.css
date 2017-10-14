@@ -61,7 +61,7 @@ ELEMENTS
 }
 
 * {
-  -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 }
 
 body, html {
@@ -71,9 +71,10 @@ body, html {
     font-weight: 200;
     font-size: 1em;
     color: #777;
+}
+
+html {
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
 }
 
 .bgimg-1 {
