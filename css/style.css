@@ -68,6 +68,7 @@ body, html {
     font-size: 1em;
     color: #777;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .bgimg-1 {
