@@ -138,6 +138,7 @@ HEADER
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 2.5vmin;
+    max-width: 200px;
 }
 
 .btn-default {
@@ -145,13 +146,11 @@ HEADER
     background: #f5f5f5;
     color: #000;
     padding: 15px;
-    min-width: 300px;
+    min-width: 200px;
+    max-width: 100%;
     letter-spacing: 1vmin;
     font-size: 2vmin;
     border: none;
-    margin-right: 50px;
-    margin-left: 50px;
-    line-height: 30px;
     text-transform: uppercase;
 }
 
