@@ -63,7 +63,7 @@ $(document).ready(function() {
             }, {
                 backgroundImage: "url(img/faq/tinohacks9.jpg)",
                 title: "Supervision and Code of Conduct?",
-                text: "There will be adult supervision at the event at all times. At night at 7pm, doors will close and lock until 7am the next morning. We will be following the <a target='_blank' style='color:#377bb5 !important' href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH code of conduct</a>, <a target='_blank' style='color:#377bb5 !important' href='https://github.com/MLH/policies/blob/master/data-sharing.md'>MLH Policies</a> and Hacker Fund Parent Packet."
+                text: "There will be adult supervision at the event at all times. At night at 7pm, doors will close and lock until 7am the next morning. We will be following the <a target='_blank' style='color:#377bb5 !important' href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH code of conduct</a>, <a target='_blank' style='color:#377bb5 !important' href='https://github.com/MLH/policies/blob/master/data-sharing.md'>MLH Policies</a>"
             }
         ];
 
