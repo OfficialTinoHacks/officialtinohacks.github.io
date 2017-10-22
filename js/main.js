@@ -106,7 +106,7 @@ $(document).ready(function() {
                 var teamHTML = '';
                 teamHTML += '<div class="center-block circle teamPhoto"></div><br/>';
                 teamHTML += '<p class="text-center teamPos">'
-                teamHTML += '<p class="teamPos"><strong>' + data[i].name + "</strong></p><hr/><p>" + data[i].short_title + '</p>';
+                teamHTML += '<p class="teamPos"><strong>' + data[i].name + "</strong></p><hr/><blockquote class='teamPos'>" + data[i].short_title + '</blockquote>';
                 teamHTML += '</p>';
 
                 $("#member" + (i + 1)).html(teamHTML);
