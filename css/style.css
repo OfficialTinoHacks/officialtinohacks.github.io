@@ -34,7 +34,6 @@ ELEMENTS
     background-color: #a06acc !important;
     color: white !important;
     border-radius: 30px;
-    box-shadow: 10px -5px 0px #ccc;
 }
 
 .panel-heading:hover {
@@ -47,7 +46,7 @@ ELEMENTS
     background-color: #f9f9f9 !important;
     border-radius: 30px;
     color: black;
-    border-top: 1px dashed #ccc !important;
+    border-top: 1px solid #ccc !important;
     padding: 30px;
 }
 
@@ -57,7 +56,6 @@ ELEMENTS
 }
 
 .panel {
-    margin: 0 !important;
     padding: 0 !important;
     border: none;
 }
