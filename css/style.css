@@ -21,21 +21,45 @@ FONTS
 ELEMENTS
 ******************************/
 
-.nav-pills>li>a {
+#faqImg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 80px;
+    width: 200px;
     height: 50px;
-    color: black !important;
-    border-bottom: 1px solid #ececec;
-    border-radius: 10px;
 }
 
-.nav-pills {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-}
-
-.nav-pills li.active>a {
+.panel-heading {
     background-color: #a06acc !important;
     color: white !important;
+    border-radius: 30px;
+    box-shadow: 10px -5px 0px #ccc;
+}
+
+.panel-heading:hover {
+    background-color: #8841c1 !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.panel-body {
+    background-color: #f9f9f9 !important;
+    border-radius: 30px;
+    color: black;
+    border-top: 1px dashed #ccc !important;
+    padding: 30px;
+}
+
+.panel>a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.panel {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
 }
 
 .frame {
