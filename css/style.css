@@ -30,6 +30,28 @@ ELEMENTS
     height: 50px;
 }
 
+.row {
+    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	max-width: 100%;
+	width: 100%;
+    
+}
+
+.sponsorImg {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+
+}
+
+.sponsorImg:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
 .panel-heading {
     background-color: #a06acc !important;
     color: white !important;
@@ -660,14 +682,3 @@ figure img:hover {
     cursor: pointer;
 }
 
-.sponsorImg {
-    width: 80%;
-    height: auto;
-}
-
-.sponsorImg:hover {
-    width: 80%;
-    height: auto;
-    transform: scale(1.02);
-    transition: 0.3s ease;
-}
