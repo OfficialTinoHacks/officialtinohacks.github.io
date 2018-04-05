@@ -1,0 +1,16 @@
+
+.widget-box {
+    background-color: #F4F4F4 !important;
+    padding: 10px !important;
+    overflow-y: scroll;
+    max-height: 60vh;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: "Heiti TC";
+}
+
+.notification-box {
+    background-color: #ededed;
+}
