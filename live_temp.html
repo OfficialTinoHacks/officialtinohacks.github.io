@@ -136,10 +136,14 @@
             result.notifications.forEach(function (notification) {
 
                 if (notification.headings.en && notification.contents.en) {
-                    $("#liveFeed").append('<a href="#" class="list-group-item"> <span class="badge">' +
-                        convertToCurrentTime(notification.queued_at) +
-                        '</span><h4 class="list-group-item-heading">' + notification.headings.en +
-                        '</h4><p class="list-group-item-text">' + notification.contents.en + '</p></a>');
+
+                    $("#announcements").append(
+                        `<div class="jumbotron notification-box">
+                        <h3 class="notificationTitle">${notification.headings.en}</h3>
+                        <p class="lead">${notification.contents.en}</p>
+                        <p class="lead pull-right">${convertToCurrentTime(notification.queued_at)}</p>
+                    </div>`
+                    );
                 }
 
             });
@@ -169,6 +173,128 @@
             });
         });
 
+        function convertToCurrentTime(unix_timestamp) {
+
+            var date = new Date(unix_timestamp * 1000);
+            /*var hours = date.getHours();
+             var minutes = "0" + date.getMinutes();
+             var seconds = "0" + date.getSeconds();*/
+
+            var current = new Date();
+
+            var DateDiff = {
+
+                inSeconds: function (d1, d2) {
+                    var t2 = date.getTime();
+                    var t1 = current.getTime();
+
+                    return Math.abs(parseInt((t2 - t1) / (1000)));
+                },
+
+                inMinutes: function (d1, d2) {
+                    var t2 = date.getTime();
+                    var t1 = current.getTime();
+
+                    return Math.abs(parseInt((t2 - t1) / (60 * 1000)));
+                },
+
+                inHours: function (d1, d2) {
+                    var t2 = date.getTime();
+                    var t1 = current.getTime();
+
+                    return Math.abs(parseInt((t2 - t1) / (3600 * 1000)));
+                },
+
+                inDays: function (d1, d2) {
+                    var t2 = date.getTime();
+                    var t1 = current.getTime();
+
+                    return Math.abs(parseInt((t2 - t1) / (24 * 3600 * 1000)));
+                },
+
+                inWeeks: function (d1, d2) {
+                    var t2 = date.getTime();
+                    var t1 = current.getTime();
+
+                    return Math.abs(parseInt((t2 - t1) / (24 * 3600 * 1000 * 7)));
+                },
+
+                inMonths: function (d1, d2) {
+                    var d1Y = current.getFullYear();
+                    var d2Y = date.getFullYear();
+                    var d1M = current.getMonth();
+                    var d2M = date.getMonth();
+
+                    return Math.abs((d2M + 12 * d2Y) - (d1M + 12 * d1Y));
+                },
+
+                inYears: function (d1, d2) {
+                    return date.getFullYear() - current.getFullYear();
+                }
+            }
+
+            //var formattedTime = ((hours > 12) ? hours - 12 : hours) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+            var yearDiff = DateDiff.inYears(current, date);
+            var monthDiff = DateDiff.inMonths(current, date);
+            var weekDiff = DateDiff.inWeeks(current, date);
+            var dayDiff = DateDiff.inDays(current, date);
+            var hourDiff = DateDiff.inHours(current, date);
+            var minutesDiff = DateDiff.inMinutes(current, date);
+            var secondsDiff = DateDiff.inSeconds(current, date);
+
+            if (yearDiff >= 2) {
+                return yearDiff + " years ago";
+            } else if (yearDiff >= 1) {
+                return "1 year ago";
+            } else if (monthDiff >= 2) {
+                return monthDiff + " months ago"
+            } else if (monthDiff >= 1) {
+
+                return "1 month ago";
+
+            } else if (weekDiff >= 2) {
+                return weekDiff + " weeks ago"
+            } else if (weekDiff >= 1) {
+                return "1 week ago"
+
+            } else if (dayDiff >= 2) {
+                return dayDiff + " days ago"
+            } else if (dayDiff >= 1) {
+                return "1 day ago"
+
+            } else if (hourDiff >= 2) {
+
+                return hourDiff + " hours ago"
+
+            } else if (hourDiff >= 1) {
+                if (minutesDiff > 0) {
+                    return "1 hour, " + (minutesDiff - (60 * hourDiff)) + " mins ago"
+                } else {
+                    return "1 hour ago"
+                }
+            } else if (minutesDiff >= 2) {
+
+                return minutesDiff + " mins ago"
+
+            } else if (minutesDiff >= 1) {
+
+                return "1 minute ago"
+
+            } else if (secondsDiff >= 2) {
+
+                return secondsDiff + " secs ago"
+
+            } else if (secondsDiff >= 1) {
+
+                return "1 second ago"
+
+            }
+
+            return "Just Now"
+
+        }
+
         // Initialize Firebase
         // var config = {
         //     apiKey: "AIzaSyDmBBGkNjjv1uylYjgJZKhUaQerUdxCw3w",
@@ -190,11 +316,11 @@
         //     snapshot.forEach(post => {
 
         //         $("#announcements").append(
-        //             `<div class="jumbotron notification-box">
-        //                 <h3 class="notificationTitle">${post.val().title}</h3>
-        //                 <p class="lead">${post.val().body}</p>
-        //                 <p class="lead pull-right">${post.val().time}</p>
-        //             </div>`
+        // `<div class="jumbotron notification-box">
+        //     <h3 class="notificationTitle">${post.val().title}</h3>
+        //     <p class="lead">${post.val().body}</p>
+        //     <p class="lead pull-right">${post.val().time}</p>
+        // </div>`
         //         );
 
         //     });
