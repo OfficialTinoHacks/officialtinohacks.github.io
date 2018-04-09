@@ -133,7 +133,7 @@
             const announcements = await fetch(request).then(data =>
                 data.json());
 
-            result.notifications.forEach(function (notification) {
+            announcements.notifications.forEach(function (notification) {
 
                 if (notification.headings.en && notification.contents.en) {
 
