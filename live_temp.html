@@ -78,7 +78,7 @@
             </div>
             <div class="col-md-16">
                 <h3>ANNOUNCEMENTS</h3>
-                <div class="jumbotron widget-box">
+                <div id="announcements" class="jumbotron widget-box">
                     <div class="jumbotron notification-box">
                         <h3 class="notificationTitle">Opening Ceremony Open!</h3>
                         <p class="lead">Welcome to TinoHacks! Please get settled in as we kickstart the event!</p>
@@ -111,29 +111,88 @@
 
     </div>
 
-    <script src="/js/airtable.browser.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
 
     <script>
-        async function fetchAnnouncements() {
-            const announcements = await fetch(
-                'https://api.airtable.com/v0/appnY6ITZzopmoDj6/Announcements?api_key=keymNzmTQFxRBCycT').then(data =>
-                data.json());
+        // async function fetchAnnouncements() {
+        //     const announcements = await fetch(
+        //         'https://api.airtable.com/v0/appnY6ITZzopmoDj6/Announcements?api_key=keymNzmTQFxRBCycT').then(data =>
+        //         data.json());
 
-            console.log(announcements.records);
-            for (const announcement of announcements.records) {
+        //     console.log(announcements.records);
+        //     for (const announcement of announcements.records) {
 
-                const {
-                    'Title': title = ''
-                } = announcement.fields;
+        //         const {
+        //             'Title': title = ''
+        //         } = announcement.fields;
 
-                console.log(title);
+        //         console.log(title);
 
-                document.getElementById('title').innerHTML = title;
+        //         document.getElementById('title').innerHTML = title;
 
+        //     }
+        // }
+
+        // fetchAnnouncements();
+
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
+            });
+        });
+
+        OneSignal.on('notificationDisplay', function (event) {
+            console.warn('OneSignal notification displayed:', event);
+
+
+            /*
+            {
+                "id": "ce31de29-e1b0-4961-99ee-080644677cd7",
+                "heading": "OneSignal Test Message",
+                "content": "This is an example notification.",
+                "url": "https://onesignal.com?_osp=do_not_open",
+                "icon": "https://onesignal.com/images/notification_logo.png"
             }
-        }
+            */
+        });
 
-        fetchAnnouncements();
+
+
+        // Initialize Firebase
+        // var config = {
+        //     apiKey: "AIzaSyDmBBGkNjjv1uylYjgJZKhUaQerUdxCw3w",
+        //     authDomain: "tinohacks2.firebaseapp.com",
+        //     databaseURL: "https://tinohacks2.firebaseio.com",
+        //     projectId: "tinohacks2",
+        //     storageBucket: "tinohacks2.appspot.com",
+        //     messagingSenderId: "779949253339"
+        // };
+        // firebase.initializeApp(config);
+
+        // const db = firebase.database();
+
+        // db.ref().child("posts").on('value', snapshot => {
+        //     const posts = snapshot.val();
+
+        //     console.log(posts);
+
+        //     snapshot.forEach(post => {
+
+        //         $("#announcements").append(
+        //             `<div class="jumbotron notification-box">
+        //                 <h3 class="notificationTitle">${post.val().title}</h3>
+        //                 <p class="lead">${post.val().body}</p>
+        //                 <p class="lead pull-right">${post.val().time}</p>
+        //             </div>`
+        //         );
+
+        //     });
+        // });
         //setInterval(() => fetchAnnouncements(), 5000);
     </script>
 </body>
