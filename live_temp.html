@@ -131,8 +131,9 @@
                 });
 
             const announcements = await fetch(request).then(data =>
-                data);
+                data.json());
 
+            console.log(announcements);
             console.log(announcements.notifications);
         }
 
