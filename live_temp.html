@@ -54,7 +54,15 @@
 
 <body>
 
-    <div class="container">
+    <div class="row">
+        <div id="sponsorResources" class="col-md-24">
+            SPONSOR RESOURCES&nbsp;
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            <div id="sponsorsWindow" style="width: 100%;"></div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
         <br>
         <div class="row">
             <div class="col-md-2 col-md-offset-11">
@@ -78,6 +86,7 @@
             </div>
             <div class="col-md-16">
                 <h3>ANNOUNCEMENTS</h3>
+                <button class="btn btn-default" id="sponsorResources">SPONSOR RESOURCES</button>
                 <div id="announcements" class="jumbotron widget-box">
 
                 </div>
@@ -94,11 +103,11 @@
             </div>
         </div>
 
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
@@ -135,34 +144,44 @@
             });
         }
 
-        fetchAnnouncements();
+        // fetchAnnouncements();
 
-        var OneSignal = window.OneSignal || [];
-        OneSignal.push(function () {
-            OneSignal.init({
-                appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
-            });
+        // var OneSignal = window.OneSignal || [];
+        // OneSignal.push(function () {
+        //     OneSignal.init({
+        //         appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
+        //     });
 
-            OneSignal.on('notificationDisplay', function (notification) {
-                console.warn('OneSignal notification displayed:', notification);
+        //     OneSignal.on('notificationDisplay', function (notification) {
+        //         console.warn('OneSignal notification displayed:', notification);
 
-                 $("#announcements").prepend(
-                        `<div class="jumbotron notification-box">
-                        <h3 class="notificationTitle">${notification.heading}</h3>
-                        <p class="lead">${notification.content}</p>
-                        <p class="lead pull-right">${convertToCurrentTime(notification.queued_at)}</p>
-                    </div>`
-                    );
-                /*
-                {
-                    "id": "ce31de29-e1b0-4961-99ee-080644677cd7",
-                    "heading": "OneSignal Test Message",
-                    "content": "This is an example notification.",
-                    "url": "https://onesignal.com?_osp=do_not_open",
-                    "icon": "https://onesignal.com/images/notification_logo.png"
-                }
-                */
-            });
+        //         $("#announcements").prepend(
+        //             `<div class="jumbotron notification-box">
+        //                 <h3 class="notificationTitle">${notification.heading}</h3>
+        //                 <p class="lead">${notification.content}</p>
+        //                 <p class="lead pull-right">${convertToCurrentTime(notification.queued_at)}</p>
+        //             </div>`
+        //         );
+        //     });
+        // });
+
+        var sponsorsOpen = false;
+
+        $("#sponsorResources").click(function (e) {
+            if (!sponsorsOpen) {
+                TweenMax.to($("#sponsorsWindow"), 0.8, {
+                    height: "100vh",
+                    ease: Sine.easeOut
+                });
+            } else {
+                TweenMax.to($("#sponsorsWindow"), 0.8, {
+                    height: "8vh",
+                    ease: Sine.easeOut
+                });
+            }
+
+            sponsorsOpen = !sponsorsOpen;
+
         });
 
         function convertToCurrentTime(unix_timestamp) {

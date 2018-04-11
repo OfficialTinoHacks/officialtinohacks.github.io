@@ -1,4 +1,3 @@
-
 .widget-box {
     background-color: #F4F4F4 !important;
     padding: 10px !important;
@@ -13,4 +12,21 @@ h3 {
 
 .notification-box {
     background-color: #ededed;
+}
+
+#sponsorResources {
+    background-color: #F4F4F4;
+    height: 8vh;
+    text-align: center;
+    line-height: 8vh;
+    cursor: pointer;
+}
+
+#sponsorResources:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+#sponsorsWindow {
+    background-color: #F4F4F4;
+    z-index: 1;
 }
