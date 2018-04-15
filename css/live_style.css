@@ -1,32 +1,125 @@
+html,
+body {
+    overflow-y: none;
+}
+
 .widget-box {
-    background-color: #F4F4F4 !important;
-    padding: 10px !important;
     overflow-y: scroll;
-    max-height: 60vh;
-    margin-bottom: 0;
+    max-height: 85vh;
+}
+
+.dark-purple {
+    background-color: #9248d3 !important;
+}
+
+td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: -10px;
+    /* correct offset on first border spacing if desired */
+}
+
+table tr {
+    background-color: #9f6dca !important;
+    margin-bottom: 10px !important;
+    color: white;
+    border-radius: 10px !important;
+}
+
+table td {
+    margin-bottom: 10px !important;
+}
+
+.latest-announcement {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 20px;
+    color: black;
+    margin-bottom: 10px;
 }
 
 h3 {
-    font-family: "Heiti TC";
+    font-family: "Avenir Next";
+}
+
+.timestamp {
+    color: rgb(221, 221, 221);
 }
 
 .notification-box {
-    background-color: #ededed;
+    background-color: #9f6dca;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 #sponsorResources {
-    background-color: #F4F4F4;
-    height: 8vh;
-    text-align: center;
-    line-height: 8vh;
+    background-color: #9f6dca;
+    color: white !important;
     cursor: pointer;
 }
 
-#sponsorResources:hover {
-    background-color: rgb(218, 218, 218);
+.navbar-toggler:focus {
+    outline: 0 !important;
+    color: white !important;
 }
 
+/* 
+#sponsorResources:hover {
+    background-color: rgb(218, 218, 218);
+} */
+
 #sponsorsWindow {
-    background-color: #F4F4F4;
-    z-index: 1;
+    background-color: #9f6dca;
+    z-index: 2;
+    display: none;
+    width: 100%;
+    margin-top: 8vh;
+}
+
+.sponsorIcon {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    padding-top: 20%;
+}
+
+.sponsorIcon:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.sponsorIcon>h4 {
+    line-height: 10vw;
+}
+
+.imgLogo {
+    height: 100%;
+    width: 100%;
+    padding: 5vh;
 }

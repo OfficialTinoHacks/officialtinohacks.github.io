@@ -42,85 +42,352 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/icons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/icons/apple-touch-icon-180x180.png">
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/responsive.css" type="text/css">
     <link rel="stylesheet" href="css/stars.css" type="text/css">
-    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/introjs.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/live_style.css">
 </head>
 
 <body>
-
     <div class="row">
-        <div id="sponsorResources" class="col-md-24">
-            SPONSOR RESOURCES&nbsp;
-            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
-            <div id="sponsorsWindow" style="width: 100%;"></div>
+        <nav id="sponsorResources" class="navbar fixed-top navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img class="d-inline-block" width="30" height="30" src="img/live/tinohacks-header.png" /> TinoHacks II LIVE
+            </a>
+            <a class="text-center navbar-brand" href="#">
+                <strong>HACKING TIME LEFT: </strong> 23:32:05</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                RESOURCES&nbsp;
+                <i id="resourcesArrow" class="fas fa-chevron-circle-down"></i>
+            </button>
+        </nav>
+        <div id="sponsorsWindow">
+            <div class="container">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://slack.com">
+                            <div style="background-image: url('img/live/slack.jpg');" data-toggle="tooltip" data-placement="bottom" title="Slack" class="sponsorIcon">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://tinohacks2.devpost.com">
+                            <div style="background-image: url('img/live/devpost.jpg');" data-toggle="tooltip" data-placement="bottom" title="Devpost"
+                                class="sponsorIcon">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://hackplus.io">
+                            <div style="background-image: url('img/live/hackplus.jpg');" data-toggle="tooltip" data-placement="bottom" title="Hack+"
+                                class="sponsorIcon">
 
-        </div>
-    </div>
-    <div class="container-fluid">
-        <br>
-        <div class="row">
-            <div class="col-md-2 col-md-offset-11">
-                <img class="center-block" style="width:100%;" src="img/logo-small.png" />
-            </div>
-        </div>
+                            </div>
+                        </a>
 
-        <br>
-        <br>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://hackclub.com">
 
-        <div class="row">
-            <div class="col-md-8">
-                <h3>TWEET US
-                    <a href="https://twitter.com/tinohacks" target="_blank">@tinohacks</a>
-                </h3>
-                <div class="jumbotron widget-box">
-                    <a class="twitter-timeline" data-height="60vh" href="https://twitter.com/TinoHacks?ref_src=twsrc%5Etfw">Tweets by TinoHacks</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <div style="background-image: url('img/live/hackclub.jpg');" data-toggle="tooltip" data-placement="bottom" title="Hack Club"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://hackclub.com">
+
+                            <div style="background-image: url('img/live/hackclub.jpg');" data-toggle="tooltip" data-placement="bottom" title="Hack Club"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://education.github.com/pack">
+                            <div style="background-image: url('img/live/github-developer.jpg');" data-toggle="tooltip" data-placement="bottom" title="Github Student Developer Pack"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://www.wolfram.com/language/">
+
+                            <div style="background-image: url('img/live/wolfram-alpha.jpg');" data-toggle="tooltip" data-placement="bottom" title="Wolfram Alpha"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://docs.google.com/document/d/1X5g-PAjQomAh0qMza0leP7S8ey_YTucLYd_AcmT3zsc/">
+
+                            <div style="background-image: url('img/live/dot-tech.jpg');" data-toggle="tooltip" data-placement="bottom" title="Free .tech Domains"
+                                class="sponsorIcon">
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <br/>
+                <div class="row ">
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://www.twilio.com">
+
+                            <div style="background-image: url('img/live/twilio.jpg');" data-toggle="tooltip" data-placement="bottom" title="Twilio" class="sponsorIcon">
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://www.jetbrains.com/student/">
+
+                            <div style="background-image: url('img/live/jetbrains.jpg');" data-toggle="tooltip" data-placement="bottom" title="Jetbrains"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://www.makeschool.com">
+
+                            <div style="background-image: url('img/live/makeschool.jpg');" data-toggle="tooltip" data-placement="bottom" title="Make School"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a target="_blank" href="https://play.google.com/store?hl=en">
+                            <div style="background-image: url('img/live/android.jpg');" data-toggle="tooltip" data-placement="bottom" title="Android App"
+                                class="sponsorIcon">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="container-fluid ">
+        <br>
+        <br>
+        <br>
+        <div class="latest-announcement text-center" data-step="1" data-intro='Hello step one!'>
+            <h3>WELCOME TO TINOHACKS!</h3>
+            <p class="lead">Please check-in upstairs at the desk.</p>
+            <p class="float-right timestamp">
+                <span class="far fa-clock"></span> Just Now</p>
+            <br>
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col-md-2">
+                <a class="twitter-timeline " data-height="100vh " href="https://twitter.com/TinoHacks?ref_src=twsrc%5Etfw ">Tweets by TinoHacks</a>
+                <script async src="https://platform.twitter.com/widgets.js " charset="utf-8 "></script>
 
             </div>
-            <div class="col-md-16">
+            <div data-step="2" data-intro="These are the announcements." class="col-md-5">
                 <h3>ANNOUNCEMENTS</h3>
-                <button class="btn btn-default" id="sponsorResources">SPONSOR RESOURCES</button>
-                <div id="announcements" class="jumbotron widget-box">
-
+                <div id="announcements" class="widget-box">
+                    <div class="notification-box">
+                        <h5>WELCOME TO TINOHACKS!</h5>
+                        <p class="lead">Please check-in upstairs at the desk.</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> Just Now</p>
+                        <br>
+                    </div>
+                    <div class="notification-box">
+                        <h5>LUNCH IS READY</h5>
+                        <p class="lead">Make your way to the Downstairs Ballroom for lunch, sponsored by Erik's Deli Cafe!</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> Just Now</p>
+                        <br>
+                    </div>
+                    <div class="notification-box">
+                        <h5>MEME WORKSHOP :)</h5>
+                        <p class="lead">Interested in memes, but don't know how to make them? Learn from one of the best meme makers around.
+                            Go to the downstairs front room.</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> 5 mins ago</p>
+                        <br>
+                    </div>
+                    <div class="notification-box">
+                        <h5>NEED A MENTOR?</h5>
+                        <p class="lead">Join our Slack page to request a mentor.</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> 1 hour ago</p>
+                        <br>
+                    </div>
+                    <div class="notification-box">
+                        <h5>WELCOME TO TINOHACKS!</h5>
+                        <p class="lead">Please check-in upstairs at the desk.</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> 8 hours ago</p>
+                        <br>
+                    </div>
+                    <div class="notification-box">
+                        <h5>WELCOME TO TINOHACKS!</h5>
+                        <p class="lead">Please check-in upstairs at the desk.</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> 12 hours ago</p>
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-24">
-                <h3>SPONSOR RESOURCES</h3>
-
-                <div class="jumbotron dock">
-
+            <div class="col-md-5">
+                <h3>SCHEDULE</h3>
+                <div class="widget-box">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr class="dark-purple">
+                                <th scope="row">8:00 AM</th>
+                                <td>Attendee Check-In</td>
+                                <td>Front Room Downstairs</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8:45 AM</th>
+                                <td>Team Mixer</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9:00 AM</th>
+                                <td>Opening Ceremony</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:00 AM</th>
+                                <td>HACKING BEGINS!</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:00 PM</th>
+                                <td>Lunch (Erik's Deli Cafe)</td>
+                                <td>Downstairs Ballroom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2:00 PM</th>
+                                <td>Workshop #1: Intro to Blockchain</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3:00 PM</th>
+                                <td>Workshop #2: Intro to Machine Learning</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4:30 PM</th>
+                                <td>Workshop #3</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6:00 PM</th>
+                                <td>Workshop #4</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7:00 PM</th>
+                                <td>Dinner (Pizza)</td>
+                                <td>Downstairs Ballroom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9:00 PM</th>
+                                <td>GAME (Surprise)</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11:30 PM</th>
+                                <td>Midnight Snack</td>
+                                <td>Downstairs Ballroom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4:20 AM</th>
+                                <td>Meme Workshop</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7:00 AM</th>
+                                <td>Breakfast</td>
+                                <td>Downstairs Ballroom</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8:30 AM</th>
+                                <td>Submission to Devpost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:00 AM</th>
+                                <td>HACKING ENDS!</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:15 AM</th>
+                                <td>Judging</td>
+                                <td>Demo Area</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:00 PM</th>
+                                <td>Award/Closing Ceremony</td>
+                                <td>Demo Area</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script src="js/intro.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js "></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js " async=" "></script>
 
 
     <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            introJs().start();
+
+        });
+
         async function fetchAnnouncements() {
             const headers = new Headers();
 
             const request = new Request(
-                "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7", {
+                "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7 ", {
                     method: 'GET',
                     headers: {
-                        "Authorization": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm"
+                        "Authorization ": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm "
                     },
                     cache: 'false'
                 });
@@ -132,11 +399,11 @@
 
                 if (notification.headings.en && notification.contents.en) {
 
-                    $("#announcements").append(
-                        `<div class="jumbotron notification-box">
-                        <h3 class="notificationTitle">${notification.headings.en}</h3>
-                        <p class="lead">${notification.contents.en}</p>
-                        <p class="lead pull-right">${convertToCurrentTime(notification.queued_at)}</p>
+                    $("#announcements ").append(
+                        `<div class="jumbotron notification-box ">
+                        <h3 class="notificationTitle ">${notification.headings.en}</h3>
+                        <p class="lead ">${notification.contents.en}</p>
+                        <p class="lead pull-right ">${convertToCurrentTime(notification.queued_at)}</p>
                     </div>`
                     );
                 }
@@ -149,17 +416,17 @@
         // var OneSignal = window.OneSignal || [];
         // OneSignal.push(function () {
         //     OneSignal.init({
-        //         appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
+        //         appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7 "
         //     });
 
         //     OneSignal.on('notificationDisplay', function (notification) {
         //         console.warn('OneSignal notification displayed:', notification);
 
-        //         $("#announcements").prepend(
-        //             `<div class="jumbotron notification-box">
-        //                 <h3 class="notificationTitle">${notification.heading}</h3>
-        //                 <p class="lead">${notification.content}</p>
-        //                 <p class="lead pull-right">${convertToCurrentTime(notification.queued_at)}</p>
+        //         $("#announcements ").prepend(
+        //             `<div class="jumbotron notification-box ">
+        //                 <h3 class="notificationTitle ">${notification.heading}</h3>
+        //                 <p class="lead ">${notification.content}</p>
+        //                 <p class="lead pull-right ">${convertToCurrentTime(notification.queued_at)}</p>
         //             </div>`
         //         );
         //     });
@@ -167,17 +434,23 @@
 
         var sponsorsOpen = false;
 
-        $("#sponsorResources").click(function (e) {
+        $("#sponsorResources ").click(function (e) {
+            $("#resourcesArrow").removeClass();
             if (!sponsorsOpen) {
-                TweenMax.to($("#sponsorsWindow"), 0.8, {
+                TweenMax.to($("#sponsorsWindow "), 0.8, {
                     height: "100vh",
-                    ease: Sine.easeOut
+                    ease: Sine.easeOut,
+                    display: "block"
                 });
+                $("#resourcesArrow").addClass("fas fa-chevron-circle-up");
             } else {
-                TweenMax.to($("#sponsorsWindow"), 0.8, {
-                    height: "8vh",
-                    ease: Sine.easeOut
+                TweenMax.to($("#sponsorsWindow "), 0.3, {
+                    height: 0,
+                    ease: Sine.easeOut,
+                    display: "none"
                 });
+
+                $("#resourcesArrow").addClass("fas fa-chevron-circle-down");
             }
 
             sponsorsOpen = !sponsorsOpen;
@@ -188,8 +461,8 @@
 
             var date = new Date(unix_timestamp * 1000);
             /*var hours = date.getHours();
-             var minutes = "0" + date.getMinutes();
-             var seconds = "0" + date.getSeconds();*/
+             var minutes = "0 " + date.getMinutes();
+             var seconds = "0 " + date.getSeconds();*/
 
             var current = new Date();
 
@@ -255,82 +528,82 @@
             var secondsDiff = DateDiff.inSeconds(current, date);
 
             if (yearDiff >= 2) {
-                return yearDiff + " years ago";
+                return yearDiff + " years ago ";
             } else if (yearDiff >= 1) {
-                return "1 year ago";
+                return "1 year ago ";
             } else if (monthDiff >= 2) {
-                return monthDiff + " months ago"
+                return monthDiff + " months ago "
             } else if (monthDiff >= 1) {
 
-                return "1 month ago";
+                return "1 month ago ";
 
             } else if (weekDiff >= 2) {
-                return weekDiff + " weeks ago"
+                return weekDiff + " weeks ago "
             } else if (weekDiff >= 1) {
-                return "1 week ago"
+                return "1 week ago "
 
             } else if (dayDiff >= 2) {
-                return dayDiff + " days ago"
+                return dayDiff + " days ago "
             } else if (dayDiff >= 1) {
-                return "1 day ago"
+                return "1 day ago "
 
             } else if (hourDiff >= 2) {
 
-                return hourDiff + " hours ago"
+                return hourDiff + " hours ago "
 
             } else if (hourDiff >= 1) {
                 if (minutesDiff > 0) {
-                    return "1 hour, " + (minutesDiff - (60 * hourDiff)) + " mins ago"
+                    return "1 hour, " + (minutesDiff - (60 * hourDiff)) + " mins ago "
                 } else {
-                    return "1 hour ago"
+                    return "1 hour ago "
                 }
             } else if (minutesDiff >= 2) {
 
-                return minutesDiff + " mins ago"
+                return minutesDiff + " mins ago "
 
             } else if (minutesDiff >= 1) {
 
-                return "1 minute ago"
+                return "1 minute ago "
 
             } else if (secondsDiff >= 2) {
 
-                return secondsDiff + " secs ago"
+                return secondsDiff + " secs ago "
 
             } else if (secondsDiff >= 1) {
 
-                return "1 second ago"
+                return "1 second ago "
 
             }
 
-            return "Just Now"
+            return "Just Now "
 
         }
 
         // Initialize Firebase
         // var config = {
-        //     apiKey: "AIzaSyDmBBGkNjjv1uylYjgJZKhUaQerUdxCw3w",
-        //     authDomain: "tinohacks2.firebaseapp.com",
-        //     databaseURL: "https://tinohacks2.firebaseio.com",
-        //     projectId: "tinohacks2",
-        //     storageBucket: "tinohacks2.appspot.com",
-        //     messagingSenderId: "779949253339"
+        //     apiKey: "AIzaSyDmBBGkNjjv1uylYjgJZKhUaQerUdxCw3w ",
+        //     authDomain: "tinohacks2.firebaseapp.com ",
+        //     databaseURL: "https://tinohacks2.firebaseio.com ",
+        //     projectId: "tinohacks2 ",
+        //     storageBucket: "tinohacks2.appspot.com ",
+        //     messagingSenderId: "779949253339 "
         // };
         // firebase.initializeApp(config);
 
         // const db = firebase.database();
 
-        // db.ref().child("posts").on('value', snapshot => {
+        // db.ref().child("posts ").on('value', snapshot => {
         //     const posts = snapshot.val();
 
         //     console.log(posts);
 
         //     snapshot.forEach(post => {
 
-        //         $("#announcements").append(
-        // `<div class="jumbotron notification-box">
-        //     <h3 class="notificationTitle">${post.val().title}</h3>
-        //     <p class="lead">${post.val().body}</p>
-        //     <p class="lead pull-right">${post.val().time}</p>
+        //         $("#announcements ").append(
+        // `<div class="jumbotron notification-box ">
+        //     <h3 class="notificationTitle ">${post.val().title}</h3>
+        //     <p class="lead ">${post.val().body}</p>
+        //     <p class="lead pull-right ">${post.val().time}</p>
         // </div>`
         //         );
 
