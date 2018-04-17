@@ -46,8 +46,6 @@
         crossorigin="anonymous">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/responsive.css" type="text/css">
-    <link rel="stylesheet" href="css/stars.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -212,49 +210,6 @@
             <div data-step="2" data-intro="These are the announcements." class="col-md-5">
                 <h3>ANNOUNCEMENTS</h3>
                 <div id="announcements" class="widget-box">
-                    <div class="notification-box">
-                        <h5>WELCOME TO TINOHACKS!</h5>
-                        <p class="lead">Please check-in upstairs at the desk.</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> Just Now</p>
-                        <br>
-                    </div>
-                    <div class="notification-box">
-                        <h5>LUNCH IS READY</h5>
-                        <p class="lead">Make your way to the Downstairs Ballroom for lunch, sponsored by Erik's Deli Cafe!</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> Just Now</p>
-                        <br>
-                    </div>
-                    <div class="notification-box">
-                        <h5>MEME WORKSHOP :)</h5>
-                        <p class="lead">Interested in memes, but don't know how to make them? Learn from one of the best meme makers around.
-                            Go to the downstairs front room.</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> 5 mins ago</p>
-                        <br>
-                    </div>
-                    <div class="notification-box">
-                        <h5>NEED A MENTOR?</h5>
-                        <p class="lead">Join our Slack page to request a mentor.</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> 1 hour ago</p>
-                        <br>
-                    </div>
-                    <div class="notification-box">
-                        <h5>WELCOME TO TINOHACKS!</h5>
-                        <p class="lead">Please check-in upstairs at the desk.</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> 8 hours ago</p>
-                        <br>
-                    </div>
-                    <div class="notification-box">
-                        <h5>WELCOME TO TINOHACKS!</h5>
-                        <p class="lead">Please check-in upstairs at the desk.</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> 12 hours ago</p>
-                        <br>
-                    </div>
                 </div>
             </div>
             <div class="col-md-5">
@@ -376,42 +331,52 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
 
-            introJs().start();
+            //introJs().start();
+
+            fetchAnnouncements();
 
         });
 
         async function fetchAnnouncements() {
-            const headers = new Headers();
+            // const headers = new Headers();
 
-            const request = new Request(
-                "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7 ", {
+            // var request = new Request(
+            //     "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7", {
+            //         method: 'GET',
+            //         headers,
+            //         cache: 'false'
+            //     });
+
+            const announcements = await fetch(
+                "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7", {
                     method: 'GET',
                     headers: {
-                        "Authorization ": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm "
+                        "Authorization": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm"
                     },
                     cache: 'false'
-                });
-
-            const announcements = await fetch(request).then(data =>
+                }).then(data =>
                 data.json());
+
+            console.log(announcements);
 
             announcements.notifications.forEach(function (notification) {
 
                 if (notification.headings.en && notification.contents.en) {
-
-                    $("#announcements ").append(
-                        `<div class="jumbotron notification-box ">
-                        <h3 class="notificationTitle ">${notification.headings.en}</h3>
-                        <p class="lead ">${notification.contents.en}</p>
-                        <p class="lead pull-right ">${convertToCurrentTime(notification.queued_at)}</p>
-                    </div>`
+                    $("#announcements").append(
+                        `
+                    <div class="notification-box">
+                        <h5>${notification.headings.en}</h5>
+                        <p class="lead">${notification.contents.en}</p>
+                        <p class="float-right timestamp">
+                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.queued_at)}</p>
+                        <br>
+                    </div>
+                    `
                     );
                 }
 
             });
         }
-
-        // fetchAnnouncements();
 
         // var OneSignal = window.OneSignal || [];
         // OneSignal.push(function () {
