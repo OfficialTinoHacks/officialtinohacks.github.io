@@ -384,7 +384,7 @@
             });
 
             db.ref('/web-posts').once('value', (snapshot) => {
-                 console.log(snapshot.val().text);
+                 console.log(snapshot.val().content);
             });
 
         }
