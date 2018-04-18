@@ -55,28 +55,39 @@
 </head>
 
 <body>
-    <div class="row">
+    <div class="row" data-step="9" data-intro="Click done to complete tutorial.">
         <nav id="sponsorResources" class="navbar fixed-top navbar-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" data-step="1" data-intro='Welcome to TinoHacks II Live! Click next to go through the tutorial.'>
                 <img class="d-inline-block" width="30" height="30" src="img/live/tinohacks-header.png" /> TinoHacks II LIVE
             </a>
-            <a id="hackingTimeLeft" class="navbar-brand" href="#">
+            <a data-step="6" data-intro="The amount of hacking time left will be posted here realtime." id="hackingTimeLeft" class="navbar-brand"
+                href="#">
                 <strong>HACKING TIME LEFT: </strong>
                 <span id="countdown-timer">24:00:00</span>
             </a>
-            <a  href="#">
-                <a class="social-media" target="_blank" href="https://www.facebook.com/tinohacks/" data-toggle="tooltip" data-placement="bottom" title="fb@tinohacks"><i class="fab fa-facebook-square"></i></a>
-                <a class="social-media" target="_blank" href="https://twitter.com/TinoHacks"><i class="fab fa-twitter-square" data-toggle="tooltip" data-placement="bottom" title="twitter@tinohacks"></i></a>
-                <a class="social-media" target="_blank" href="https://www.instagram.com/tinohacks/"><i class="fab fa-instagram" data-toggle="tooltip" data-placement="bottom" title="ig@tinohacks"></i></a>
-                <a class="social-media" target="_blank" href="https://www.flickr.com/photos/150174093@N05/"><i class="fab fa-flickr" data-toggle="tooltip" data-placement="bottom" title="flickr@tinohacks"></i></a>
-                <a class="social-media" target="_blank" href="https://slack.com"><i class="fab fa-slack" data-toggle="tooltip" data-placement="bottom" title="Slack"></i></a>
+            <a href="#" data-step="7" data-intro="Access all our social media here.">
+                <a class="social-media" target="_blank" href="https://www.facebook.com/tinohacks/" data-toggle="tooltip" data-placement="bottom"
+                    title="fb@tinohacks">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="social-media" target="_blank" href="https://twitter.com/TinoHacks">
+                    <i class="fab fa-twitter-square" data-toggle="tooltip" data-placement="bottom" title="twitter@tinohacks"></i>
+                </a>
+                <a class="social-media" target="_blank" href="https://www.instagram.com/tinohacks/">
+                    <i class="fab fa-instagram" data-toggle="tooltip" data-placement="bottom" title="ig@tinohacks"></i>
+                </a>
+                <a class="social-media" target="_blank" href="https://www.flickr.com/photos/150174093@N05/">
+                    <i class="fab fa-flickr" data-toggle="tooltip" data-placement="bottom" title="flickr@tinohacks"></i>
+                </a>
+                <a class="social-media" target="_blank" href="https://slack.com">
+                    <i class="fab fa-slack" data-toggle="tooltip" data-placement="bottom" title="Slack"></i>
+                </a>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button data-step="8" data-intro="Resources to sponsor APIs and other links can be found here." class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 RESOURCES&nbsp;
                 <i id="resourcesArrow" class="fas fa-chevron-circle-down"></i>
             </button>
-
         </nav>
         <div id="sponsorsWindow">
             <div class="container">
@@ -203,7 +214,7 @@
         <br>
         <br>
         <br>
-        <div class="latest-announcement text-center" data-step="1" data-intro='Hello step one!'>
+        <div class="latest-announcement text-center" data-step="3" data-intro='The latest announcement will be posted here.'>
             <h3></h3>
             <p class="lead"></p>
             <p class="float-right timestamp">
@@ -213,17 +224,16 @@
         </div>
         <br>
         <div class="row ">
-            <div class="col-md-2">
+            <div data-step="5" data-intro="View our realtime Twitter feed @tinohacks here." class="col-md-2">
                 <a class="twitter-timeline " data-height="60vh " href="https://twitter.com/TinoHacks?ref_src=twsrc%5Etfw ">Tweets by TinoHacks</a>
                 <script async src="https://platform.twitter.com/widgets.js " charset="utf-8 "></script>
-
             </div>
-            <div data-step="2" data-intro="These are the announcements." class="col-md-5">
+            <div data-step="2" data-intro="All announcements and notifications will be posted here." class="col-md-5">
                 <h3>ANNOUNCEMENTS</h3>
                 <div id="announcements" class="widget-box">
                 </div>
             </div>
-            <div class="col-md-5">
+            <div data-step="4" data-intro="View any real time updates to the schedule here." class="col-md-5">
                 <h3>SCHEDULE</h3>
                 <div id="scheduleWidget" class="widget-box">
                     <table class="table table-hover">
@@ -263,7 +273,11 @@
         firebase.initializeApp(config);
 
         const db = firebase.database();
-        //introJs().start();
+
+        if (localStorage.getItem('tutorialActivated') != 'true') {
+            introJs().setOption("skipLabel", "Skip Tutorial").start();
+            localStorage.setItem("tutorialActivated", "true");
+        }
 
         db.ref('schedule').orderByChild('index').once('value', (snapshot) => {
             snapshot.forEach((event) => {
