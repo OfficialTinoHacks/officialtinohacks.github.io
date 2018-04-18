@@ -281,9 +281,8 @@
         db.ref('scheduleVal').on('value', (snapshot) => {
             $("#schedule > tr").removeClass();
             $("#schedule > tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
-            $('#scheduleWidget').animate({
-                scrollTop: $("#schedule > tr:nth-child(" + snapshot.val() + ")").offset().top
-            });
+            var rowpos = $("#schedule > tr:nth-child(" + snapshot.val() + ")").position();
+            $('#scheduleWidget').scrollTop(rowpos.top);
         });
 
         fetchAnnouncements();
