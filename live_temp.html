@@ -346,6 +346,7 @@
 
         fetchAnnouncements();
 
+        var notifications = [];
         var notificationIds = [];
 
         async function fetchAnnouncements() {
@@ -365,22 +366,15 @@
             let html = "";
 
             announcements.notifications.forEach(function (notification) {
-
                 if (notification.headings.en && notification.contents.en) {
-                    html +=
-                        `
-                    <div class="notification-box">
-                        <h5>${notification.headings.en}</h5>
-                        <p class="lead">${notification.contents.en}</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.queued_at)}</p>
-                        <br>
-                    </div>`;
-
+                    notifications.push({
+                        title: notification.headings.en,
+                        content: notification.contents.en,
+                        time: notification.queued_at,
+                        id: notification.id
+                    });
+                    notificationIds.push(notification.id);
                 }
-
-                notificationIds.push(notification.id);
-
             });
 
             db.ref('/web-posts').once('value', (snapshot) => {
@@ -389,26 +383,31 @@
                     console.log(notificationIds);
                     console.log(!notificationIds.includes(notification.key));
                     if (!notificationIds.includes(notification.key)) {
-                        console.log("HII");
-                        console.log("Notification", notification.val());
-                        html +=
-                            `
+                        notifications.push(notification.val());
+                    }
+                });
+            }).then(() => {
+                notifications.sort((a, b) => {
+                    return a.time - b.time;
+                });
+
+                let html = "";
+
+                notifications.forEach(notification => {
+                    html +=
+                        `
                     <div class="notification-box">
-                        <h5>${notification.val().title}</h5>
-                        <p class="lead">${notification.val().content}</p>
+                        <h5>${notification.title}</h5>
+                        <p class="lead">${notification.content}</p>
                         <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.val().time)}</p>
+                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.time)}</p>
                         <br>
                     </div>`;
-                    }
 
                 });
+
+                $("#announcements").append(html);
             });
-
-            console.log(html);
-
-            $("#announcements").append(html);
-
         }
 
         var OneSignal = window.OneSignal || [];
