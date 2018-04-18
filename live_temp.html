@@ -409,7 +409,7 @@
                     </div>`
                 );
 
-                db.ref('/web-posts').set({
+                db.ref('web-posts/' + notification.id).set({
                     title: notification.heading,
                     body: notification.content,
                     time: notification.queued_at,
