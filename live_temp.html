@@ -385,6 +385,8 @@
 
             db.ref('/web-posts').once('value', (snapshot) => {
                 snapshot.forEach((notification) => {
+                    console.log(notification, notification.val().id);
+                    console.log(notificationIds);
                     if (!notificationIds.includes(notification.val().id)) {
                         html +=
                             `
