@@ -383,6 +383,8 @@
                     console.log(!notificationIds.includes(notification.key));
                     if (!notificationIds.includes(notification.key)) {
                         notifications.push(notification.val());
+                    } else {
+                        db.ref("web-posts/" + notification.val().id).remove();
                     }
                 });
             }).then(() => {
