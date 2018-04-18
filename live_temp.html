@@ -387,7 +387,9 @@
                 snapshot.forEach((notification) => {
                     console.log(notification, notification.key);
                     console.log(notificationIds);
+                    console.log(!notificationIds.includes(notification.key));
                     if (!notificationIds.includes(notification.key)) {
+                        console.log("HII");
                         html +=
                             `
                     <div class="notification-box">
