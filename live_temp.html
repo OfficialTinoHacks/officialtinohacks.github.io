@@ -384,9 +384,9 @@
 
             });
 
-            db.ref().child('web-posts').once('value', (snapshot) => {
-                console.log(snapshot.val());
-            });
+            // db.ref('web-posts').once('value', (snapshot) => {
+            //     console.log(snapshot.val());
+            // });
 
         }
 
@@ -409,7 +409,7 @@
                     </div>`
                 );
 
-                db.ref().child('web-posts').push({
+                db.ref('web-posts').push({
                     title: notification.heading,
                     body: notification.content,
                     time: notification.queued_at,
