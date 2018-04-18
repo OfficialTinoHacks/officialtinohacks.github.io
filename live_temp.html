@@ -385,9 +385,9 @@
 
             db.ref('/web-posts').once('value', (snapshot) => {
                 snapshot.forEach((notification) => {
-                    console.log(notification, notification.val().id);
+                    console.log(notification, notification.key);
                     console.log(notificationIds);
-                    if (!notificationIds.includes(notification.val().id)) {
+                    if (!notificationIds.includes(notification.key) {
                         html +=
                             `
                     <div class="notification-box">
