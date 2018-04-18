@@ -8,6 +8,20 @@ body {
     max-height: 60vh;
 }
 
+.social-media {
+    font-size: 2.5em;
+    color: white;
+    margin-left: -50px;
+}
+
+.social-media:hover {
+    color: white;
+}
+
+.navbar-nav > li {
+    display: inline !important;
+}
+
 .dark-purple {
     background-color: #9248d3 !important;
 }
