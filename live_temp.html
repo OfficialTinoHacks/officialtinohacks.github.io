@@ -360,8 +360,6 @@
                 }).then(data =>
                 data.json());
 
-            console.log(announcements);
-
             let html = "";
 
             announcements.notifications.forEach(function (notification) {
@@ -378,9 +376,6 @@
 
             db.ref('/web-posts').once('value', (snapshot) => {
                 snapshot.forEach((notification) => {
-                    console.log(notification, notification.key);
-                    console.log(notificationIds);
-                    console.log(!notificationIds.includes(notification.key));
                     if (!notificationIds.includes(notification.key)) {
                         notifications.push(notification.val());
                     } else {
@@ -391,8 +386,6 @@
                 notifications.sort((a, b) => {
                     return b.time - a.time;
                 });
-
-                console.log(notifications);
 
                 let html = "";
 
@@ -450,17 +443,17 @@
 
         var sponsorsOpen = false;
 
-        $("#sponsorResources ").click(function (e) {
+        $("#sponsorResources").click(function (e) {
             $("#resourcesArrow").removeClass();
             if (!sponsorsOpen) {
-                TweenMax.to($("#sponsorsWindow "), 0.8, {
+                TweenMax.to($("#sponsorsWindow"), 0.8, {
                     height: "100vh",
                     ease: Sine.easeOut,
                     display: "block"
                 });
                 $("#resourcesArrow").addClass("fas fa-chevron-circle-up");
             } else {
-                TweenMax.to($("#sponsorsWindow "), 0.3, {
+                TweenMax.to($("#sponsorsWindow"), 0.3, {
                     height: 0,
                     ease: Sine.easeOut,
                     display: "none"
