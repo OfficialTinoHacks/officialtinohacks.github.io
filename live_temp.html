@@ -424,6 +424,8 @@
 
                 const receivedTime = Math.floor(Date.now() / 1000);
 
+                console.log("Received Time", receivedTime);
+
                 $("#announcements").prepend(
                     `<div class="notification-box">
                         <h5>${notification.heading}</h5>
