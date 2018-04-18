@@ -383,13 +383,14 @@
 
             });
 
-            // db.ref('web-posts').once('value', (snapshot) => {
-            //     console.log(snapshot.val());
-            // });
+            db.ref('/web-posts').once('value', (snapshot) => {
+                 console.log(snapshot.val());
+            });
 
         }
 
         var OneSignal = window.OneSignal || [];
+
         OneSignal.push(function () {
             OneSignal.init({
                 appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
@@ -408,7 +409,7 @@
                     </div>`
                 );
 
-                db.ref('web-posts').push({
+                db.ref('/web-posts').set({
                     title: notification.heading,
                     body: notification.content,
                     time: notification.queued_at,
