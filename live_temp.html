@@ -282,6 +282,7 @@
             $("#schedule > tr").removeClass();
             $("#schedule > tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
             var rowpos = $("#schedule > tr:nth-child(" + snapshot.val() + ")").position();
+            rowpos.top = rowpos.top - 30;
             $('#scheduleWidget').scrollTop(rowpos.top);
         });
 
