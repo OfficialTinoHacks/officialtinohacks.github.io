@@ -344,6 +344,11 @@
         const db = firebase.database();
         //introJs().start();
 
+        db.ref('scheduleVal').on('value', (snapshot) => {
+            $("tr").removeClass();
+            $("tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
+        });
+
         fetchAnnouncements();
 
         var notifications = [];
@@ -429,6 +434,11 @@
                         <br>
                     </div>`
                 );
+
+                $(".latest-announcement > h3").text(notification.heading);
+                $(".latest-announcement > p.lead").text(notification.content);
+                $(".latest-announcement > p.timestamp").html(
+                    `<span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}`);
 
                 db.ref('web-posts/' + notification.id).set({
                     title: notification.heading,
