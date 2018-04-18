@@ -409,10 +409,12 @@
                     </div>`
                 );
 
+                console.log(notification);
+                console.log(notification.queued_at);
+
                 db.ref('web-posts/' + notification.id).set({
                     title: notification.heading,
-                    body: notification.content,
-                    time: notification.queued_at,
+                    body: notification.content, 
                     id: notification.id
                 });
             });
