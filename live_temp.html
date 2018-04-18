@@ -384,7 +384,7 @@
 
             });
 
-            db.ref('web-posts').once('value', (snapshot) => {
+            db.ref().child('web-posts').once('value', (snapshot) => {
                 console.log(snapshot.val());
             });
 
@@ -409,7 +409,7 @@
                     </div>`
                 );
 
-                db.ref('web-posts').push({
+                db.ref().child('web-posts').push({
                     title: notification.heading,
                     body: notification.content,
                     time: notification.queued_at,
