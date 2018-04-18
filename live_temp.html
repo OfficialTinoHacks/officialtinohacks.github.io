@@ -430,8 +430,6 @@
                     </div>`
                 );
 
-                db.ref('web-posts-ids').push(notification.id);
-
                 db.ref('web-posts/' + notification.id).set({
                     title: notification.heading,
                     content: notification.content,
