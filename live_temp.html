@@ -384,10 +384,9 @@
             });
 
             db.ref('/web-posts').once('value', (snapshot) => {
-                if (snapshot.val().content) {
-                    if (!notificationIds.includes(snapshot.val().id)) {
-                        html +=
-                            `
+                if (!notificationIds.includes(snapshot.val().id)) {
+                    html +=
+                        `
                     <div class="notification-box">
                         <h5>${snapshot.val().title}</h5>
                         <p class="lead">${snapshot.val().content}</p>
@@ -395,8 +394,8 @@
                             <span class="far fa-clock"></span> ${convertToCurrentTime(snapshot.val().time)}</p>
                         <br>
                     </div>`;
-                    }
                 }
+
             });
 
             $("#announcements").append(html);
