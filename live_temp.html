@@ -384,7 +384,7 @@
             });
 
             db.ref('/web-posts').once('value', (snapshot) => {
-                 console.log(snapshot.val());
+                 console.log(snapshot.val().text);
             });
 
         }
@@ -399,23 +399,23 @@
             OneSignal.on('notificationDisplay', function (notification) {
                 console.warn('OneSignal notification displayed:', notification);
 
+                const receivedTime = Date.now();
+
                 $("#announcements").prepend(
                     `<div class="notification-box">
                         <h5>${notification.heading}</h5>
                         <p class="lead">${notification.content}</p>
                         <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.queued_at)}</p>
+                            <span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}</p>
                         <br>
                     </div>`
                 );
 
-                console.log(notification);
-                console.log(notification.queued_at);
-
                 db.ref('web-posts/' + notification.id).set({
                     title: notification.heading,
                     body: notification.content, 
-                    id: notification.id
+                    id: notification.id,
+                    time: receivedTime
                 });
             });
         });
