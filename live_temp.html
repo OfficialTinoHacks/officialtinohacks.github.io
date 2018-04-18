@@ -388,7 +388,7 @@
                 });
             }).then(() => {
                 notifications.sort((a, b) => {
-                    return a.time - b.time;
+                    return b.time - a.time;
                 });
 
                 console.log(notifications);
@@ -422,7 +422,7 @@
             OneSignal.on('notificationDisplay', function (notification) {
                 console.warn('OneSignal notification displayed:', notification);
 
-                const receivedTime = Date.now();
+                const receivedTime = Math.floor(Date.now() / 1000);
 
                 $("#announcements").prepend(
                     `<div class="notification-box">
