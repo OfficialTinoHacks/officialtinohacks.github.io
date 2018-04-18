@@ -194,10 +194,10 @@
         <br>
         <br>
         <div class="latest-announcement text-center" data-step="1" data-intro='Hello step one!'>
-            <h3>WELCOME TO TINOHACKS!</h3>
-            <p class="lead">Please check-in upstairs at the desk.</p>
+            <h3></h3>
+            <p class="lead"></p>
             <p class="float-right timestamp">
-                <span class="far fa-clock"></span> Just Now</p>
+                <span class="far fa-clock"></span></p>
             <br>
         </div>
         <br>
@@ -312,7 +312,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -408,6 +407,12 @@
                 });
 
                 $("#announcements").append(html);
+
+                console.log($("#announcements > h5").text());
+
+                $(".latest-announcement > h3").html($("#announcements > div.notification-box:nth-child(1) > h5").text());
+                $(".latest-announcement > p.lead").html($("#announcements > div.notification-box:nth-child(1) > p.lead").text());
+                $(".latest-announcement > p.timestamp").html($("#announcements > div.notification-box:nth-child(1) > p.timestamp").html());
             });
         }
 
