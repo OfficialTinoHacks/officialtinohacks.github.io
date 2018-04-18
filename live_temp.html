@@ -60,8 +60,8 @@
             <a class="navbar-brand" href="#">
                 <img class="d-inline-block" width="30" height="30" src="img/live/tinohacks-header.png" /> TinoHacks II LIVE
             </a>
-            <a class="text-center navbar-brand" href="#">
-                <strong>HACKING TIME LEFT: </strong> 23:32:05</a>
+            <a id="hackingTimeLeft" class="text-center navbar-brand" href="#">
+                <strong>HACKING TIME LEFT: </strong> <span id="countdown-timer">24:00:00</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 RESOURCES&nbsp;
@@ -197,13 +197,14 @@
             <h3></h3>
             <p class="lead"></p>
             <p class="float-right timestamp">
-                <span class="far fa-clock"></span></p>
+                <span class="far fa-clock"></span>
+            </p>
             <br>
         </div>
         <br>
         <div class="row ">
             <div class="col-md-2">
-                <a class="twitter-timeline " data-height="100vh " href="https://twitter.com/TinoHacks?ref_src=twsrc%5Etfw ">Tweets by TinoHacks</a>
+                <a class="twitter-timeline " data-height="60vh " href="https://twitter.com/TinoHacks?ref_src=twsrc%5Etfw ">Tweets by TinoHacks</a>
                 <script async src="https://platform.twitter.com/widgets.js " charset="utf-8 "></script>
 
             </div>
@@ -216,97 +217,8 @@
                 <h3>SCHEDULE</h3>
                 <div class="widget-box">
                     <table class="table table-hover">
-                        <tbody>
-                            <tr class="dark-purple">
-                                <th scope="row">8:00 AM</th>
-                                <td>Attendee Check-In</td>
-                                <td>Front Room Downstairs</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8:45 AM</th>
-                                <td>Team Mixer</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9:00 AM</th>
-                                <td>Opening Ceremony</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10:00 AM</th>
-                                <td>HACKING BEGINS!</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12:00 PM</th>
-                                <td>Lunch (Erik's Deli Cafe)</td>
-                                <td>Downstairs Ballroom</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2:00 PM</th>
-                                <td>Workshop #1: Intro to Blockchain</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3:00 PM</th>
-                                <td>Workshop #2: Intro to Machine Learning</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4:30 PM</th>
-                                <td>Workshop #3</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6:00 PM</th>
-                                <td>Workshop #4</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7:00 PM</th>
-                                <td>Dinner (Pizza)</td>
-                                <td>Downstairs Ballroom</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9:00 PM</th>
-                                <td>GAME (Surprise)</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">11:30 PM</th>
-                                <td>Midnight Snack</td>
-                                <td>Downstairs Ballroom</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4:20 AM</th>
-                                <td>Meme Workshop</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7:00 AM</th>
-                                <td>Breakfast</td>
-                                <td>Downstairs Ballroom</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8:30 AM</th>
-                                <td>Submission to Devpost</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10:00 AM</th>
-                                <td>HACKING ENDS!</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10:15 AM</th>
-                                <td>Judging</td>
-                                <td>Demo Area</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12:00 PM</th>
-                                <td>Award/Closing Ceremony</td>
-                                <td>Demo Area</td>
-                            </tr>
+                        <tbody id="schedule">
+
                         </tbody>
                     </table>
                 </div>
@@ -343,9 +255,30 @@
         const db = firebase.database();
         //introJs().start();
 
+        db.ref('schedule').orderByChild('index').once('value', (snapshot) => {
+            snapshot.forEach((event) => {
+                $("#schedule").append(
+                    `
+                    <tr>
+                        <th scope="row">${event.val().time}</th>
+                        <td>${event.val().title}</td>
+                        <td>${event.val().place}</td>
+                    </tr>
+                    `
+                );
+
+            });
+        });
+
+        db.ref('schedule').on('child_changed', (snapshot) => {
+            $("#schedule > tr:nth-child(" + snapshot.val().index + ") > th").html(snapshot.val().time);
+            $("#schedule > tr:nth-child(" + snapshot.val().index + ") > td:nth-child(2)").html(snapshot.val().title);
+            $("#schedule > tr:nth-child(" + snapshot.val().index + ") > td:nth-child(3)").html(snapshot.val().place);
+        });
+
         db.ref('scheduleVal').on('value', (snapshot) => {
-            $("tr").removeClass();
-            $("tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
+            $("#schedule > tr").removeClass();
+            $("#schedule > tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
         });
 
         fetchAnnouncements();
@@ -408,11 +341,12 @@
 
                 $("#announcements").append(html);
 
-                console.log($("#announcements > h5").text());
-
-                $(".latest-announcement > h3").html($("#announcements > div.notification-box:nth-child(1) > h5").text());
-                $(".latest-announcement > p.lead").html($("#announcements > div.notification-box:nth-child(1) > p.lead").text());
-                $(".latest-announcement > p.timestamp").html($("#announcements > div.notification-box:nth-child(1) > p.timestamp").html());
+                $(".latest-announcement > h3").html($("#announcements > div.notification-box:nth-child(1) > h5")
+                    .text());
+                $(".latest-announcement > p.lead").html($(
+                    "#announcements > div.notification-box:nth-child(1) > p.lead").text());
+                $(".latest-announcement > p.timestamp").html($(
+                    "#announcements > div.notification-box:nth-child(1) > p.timestamp").html());
             });
         }
 
@@ -478,6 +412,30 @@
             sponsorsOpen = !sponsorsOpen;
 
         });
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Apr 22, 2018 10:00:00 AM").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24);
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            $("#countdown-timer").html(((hours < 10) ? "" + 0 + hours : hours) + ":" + ((minutes < 10) ? "" + 0 +
+                minutes : minutes) + ":" + ((seconds < 10) ? "" + 0 + seconds : seconds));
+
+            if (distance < 0) {
+                clearInterval(x);
+                $("#hackingTimeLeft").html("<strong>END OF HACKING</strong>");
+            }
+        }, 1000);
 
         function convertToCurrentTime(unix_timestamp) {
 
@@ -565,9 +523,9 @@
                 return "1 week ago "
 
             } else if (dayDiff >= 2) {
-                return dayDiff + " days ago "
+                return dayDiff + " days ago"
             } else if (dayDiff >= 1) {
-                return "1 day ago "
+                return "1 day ago"
 
             } else if (hourDiff >= 2) {
 

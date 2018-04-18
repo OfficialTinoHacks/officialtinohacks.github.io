@@ -1,11 +1,11 @@
 html,
 body {
-    overflow-y: none;
+    overflow: none;
 }
 
 .widget-box {
     overflow-y: scroll;
-    max-height: 85vh;
+    max-height: 60vh;
 }
 
 .dark-purple {
@@ -55,8 +55,8 @@ table td {
     margin-bottom: 10px;
 }
 
-h3 {
-    font-family: "Avenir Next";
+.latest-announcement > h3 {
+    text-transform: uppercase;
 }
 
 .timestamp {
@@ -81,11 +81,6 @@ h3 {
     outline: 0 !important;
     color: white !important;
 }
-
-/* 
-#sponsorResources:hover {
-    background-color: rgb(218, 218, 218);
-} */
 
 #sponsorsWindow {
     background-color: #9f6dca;
