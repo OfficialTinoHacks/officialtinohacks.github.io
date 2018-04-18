@@ -61,7 +61,9 @@
                 <img class="d-inline-block" width="30" height="30" src="img/live/tinohacks-header.png" /> TinoHacks II LIVE
             </a>
             <a id="hackingTimeLeft" class="text-center navbar-brand" href="#">
-                <strong>HACKING TIME LEFT: </strong> <span id="countdown-timer">24:00:00</span></a>
+                <strong>HACKING TIME LEFT: </strong>
+                <span id="countdown-timer">24:00:00</span>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 RESOURCES&nbsp;
@@ -215,7 +217,7 @@
             </div>
             <div class="col-md-5">
                 <h3>SCHEDULE</h3>
-                <div class="widget-box">
+                <div id="scheduleWidget" class="widget-box">
                     <table class="table table-hover">
                         <tbody id="schedule">
 
@@ -279,6 +281,9 @@
         db.ref('scheduleVal').on('value', (snapshot) => {
             $("#schedule > tr").removeClass();
             $("#schedule > tr:nth-child(" + snapshot.val() + ")").addClass("dark-purple");
+            $('#scheduleWidget').animate({
+                scrollTop: $("#schedule > tr:nth-child(" + snapshot.val() + ")").offset().top
+            });
         });
 
         fetchAnnouncements();
