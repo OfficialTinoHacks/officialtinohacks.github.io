@@ -321,41 +321,41 @@
 
         async function fetchAnnouncements() {
 
-            const announcements = await fetch(
-                "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7&cache=false", {
-                    method: 'GET',
-                    headers: {
-                        "Authorization": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm"
-                    }
-                }).then(data =>
-                data.json());
+            // const announcements = await fetch(
+            //     "https://onesignal.com/api/v1/notifications?app_id=f007ff53-ebb8-454e-8de5-16c3e75036e7&cache=false", {
+            //         method: 'GET',
+            //         headers: {
+            //             "Authorization": "Basic OTRmMDEyODQtZThiZC00ZTgyLWIyZjQtMmYxY2ViZjEwYmNm"
+            //         }
+            //     }).then(data =>
+            //     data.json());
 
-            let html = "";
+            // let html = "";
 
-            announcements.notifications.forEach(function (notification) {
-                if (notification.headings.en && notification.contents.en) {
-                    notifications.push({
-                        title: notification.headings.en,
-                        content: notification.contents.en,
-                        time: notification.queued_at,
-                        id: notification.id
-                    });
-                    notificationIds.push(notification.id);
-                }
-            });
+            // announcements.notifications.forEach(function (notification) {
+            //     if (notification.headings.en && notification.contents.en) {
+            //         notifications.push({
+            //             title: notification.headings.en,
+            //             content: notification.contents.en,
+            //             time: notification.queued_at,
+            //             id: notification.id
+            //         });
+            //         notificationIds.push(notification.id);
+            //     }
+            // });
 
-            db.ref('/web-posts').once('value', (snapshot) => {
+            var notifications = [];
+
+            db.ref('posts').on('value', (snapshot) => {
                 snapshot.forEach((notification) => {
-                    if (!notificationIds.includes(notification.key)) {
-                        notifications.push(notification.val());
-                    } else {
-                        db.ref("web-posts/" + notification.val().id).remove();
-                    }
+                    notifications.push(notification.val());
                 });
-            }).then(() => {
+
                 notifications.sort((a, b) => {
                     return b.time - a.time;
                 });
+
+                console.log(notifications);
 
                 let html = "";
 
@@ -364,9 +364,9 @@
                         `
                     <div class="notification-box">
                         <h5>${notification.title}</h5>
-                        <p class="lead">${notification.content}</p>
+                        <p class="lead">${notification.body}</p>
                         <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> ${convertToCurrentTime(notification.time)}</p>
+                            <span class="far fa-clock"></span> ${convertToCurrentTime(Math.floor(notification.time / 1000))}</p>
                         <br>
                     </div>`;
 
@@ -380,7 +380,9 @@
                     "#announcements > div.notification-box:nth-child(1) > p.lead").text());
                 $(".latest-announcement > p.timestamp").html($(
                     "#announcements > div.notification-box:nth-child(1) > p.timestamp").html());
+
             });
+
         }
 
         var OneSignal = window.OneSignal || [];
@@ -390,35 +392,35 @@
                 appId: "f007ff53-ebb8-454e-8de5-16c3e75036e7"
             });
 
-            OneSignal.on('notificationDisplay', function (notification) {
-                console.warn('OneSignal notification displayed:', notification);
+            // OneSignal.on('notificationDisplay', function (notification) {
+            //     console.warn('OneSignal notification displayed:', notification);
 
-                const receivedTime = Math.floor(Date.now() / 1000);
+            //     const receivedTime = Math.floor(Date.now() / 1000);
 
-                console.log("Received Time", receivedTime);
+            //     console.log("Received Time", receivedTime);
 
-                $("#announcements").prepend(
-                    `<div class="notification-box">
-                        <h5>${notification.heading}</h5>
-                        <p class="lead">${notification.content}</p>
-                        <p class="float-right timestamp">
-                            <span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}</p>
-                        <br>
-                    </div>`
-                );
+            //     $("#announcements").prepend(
+            //         `<div class="notification-box">
+            //             <h5>${notification.heading}</h5>
+            //             <p class="lead">${notification.content}</p>
+            //             <p class="float-right timestamp">
+            //                 <span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}</p>
+            //             <br>
+            //         </div>`
+            //     );
 
-                $(".latest-announcement > h3").text(notification.heading);
-                $(".latest-announcement > p.lead").text(notification.content);
-                $(".latest-announcement > p.timestamp").html(
-                    `<span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}`);
+            //     $(".latest-announcement > h3").text(notification.heading);
+            //     $(".latest-announcement > p.lead").text(notification.content);
+            //     $(".latest-announcement > p.timestamp").html(
+            //         `<span class="far fa-clock"></span> ${convertToCurrentTime(receivedTime)}`);
 
-                db.ref('web-posts/' + notification.id).set({
-                    title: notification.heading,
-                    content: notification.content,
-                    id: notification.id,
-                    time: receivedTime
-                });
-            });
+            //     db.ref('web-posts/' + notification.id).set({
+            //         title: notification.heading,
+            //         content: notification.content,
+            //         id: notification.id,
+            //         time: receivedTime
+            //     });
+            // });
         });
 
         var sponsorsOpen = false;
@@ -463,14 +465,16 @@
                     var distance = countDownDate - now;
 
                     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (
-                        days * 24);
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) +
+                        (
+                            days * 24);
                     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                     $("#countdown-timer").html(((hours < 10) ? "" + 0 + hours : hours) + ":" + ((
                             minutes < 10) ? "" + 0 +
-                        minutes : minutes) + ":" + ((seconds < 10) ? "" + 0 + seconds : seconds));
+                        minutes : minutes) + ":" + ((seconds < 10) ? "" + 0 + seconds :
+                        seconds));
 
                     if (distance < 0) {
                         clearInterval(x);
