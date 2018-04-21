@@ -510,11 +510,6 @@ a {
     text-align: center;
 }
 
-#countdown-timer {
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 3em;
-}
-
 .badge {
     background: none;
     color: gray;
