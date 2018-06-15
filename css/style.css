@@ -36,7 +36,7 @@ ELEMENTS
 	align-items: center;
 	max-width: 100%;
 	width: 100%;
-    
+
 }
 
 .sponsorImg {
@@ -677,4 +677,3 @@ figure img:hover {
     margin-top: -10px;
     cursor: pointer;
 }
-
