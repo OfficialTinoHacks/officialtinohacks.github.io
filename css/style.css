@@ -17,6 +17,22 @@ FONTS
     src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
+@font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(../fonts/Brandon_bld.otf);
+}
+
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url(../fonts/Brandon_reg.otf);
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Light";
+    src: url(../fonts/Brandon_light.otf);
+}
+
+
 /*****************************
 ELEMENTS
 ******************************/
@@ -51,6 +67,24 @@ ELEMENTS
     color: white;
 }
 
+#large-header {
+  z-index: 0;
+  font-family: "Brandon Grotesque";
+}
+
+#mentor-button, #apply-button{
+  display: inline-block;
+  float: center;
+}
+
+#about {
+  z-index: -1;
+  color: #000;
+  background-color:white;
+  padding:50px 80px;
+  text-align:center;
+}
+
 #faqImg {
     background-size: contain;
     background-repeat: no-repeat;
@@ -60,20 +94,40 @@ ELEMENTS
     height: 50px;
 }
 
-
-
-#mentor-button, #apply-button{
-  display: inline-block;
-  float: center;
+#faq {
+  z-index: -1;
+  color: #000;
+  background-color:white;
+  padding:50px 80px;
 }
 
+#sponsors {
+  color:#FFF;
+  background: #a06acc; /* Old browsers */
+  background: -moz-linear-gradient(top, #a06acc 4%, #337ab7 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a06acc 4%,#337ab7 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a06acc 4%,#337ab7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a06acc', endColorstr='#337ab7',GradientType=0 );text-align:center;padding:50px 80px;text-align: center;
+}
 
+#partners {
+  color:#000;
+  background-color:#FFF;
+  padding:50px 80px;
+}
 
+#footer {
+  color: white; /* Old browsers */
+  background: -moz-linear-gradient(top, #2c7ae8 2%, #35a3bb 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #2c7ae8 2%,#35a3bb 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #2c7ae8 2%,#35a3bb 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c7ae8', endColorstr='#35a3bb',GradientType=0 );text-align:center;padding:50px 80px;text-align: text-center;
+}
 
 .buttons button{
   outline: none;
   font-size: 20px;
-  font-family: "Brandon Grotesque";
+  font-family: 'Brandon Grotesque Light';
   font-weight:lighter;
   border-radius:3px;
   border: 1px solid #fff;
