@@ -17,6 +17,22 @@ FONTS
     src: url(../fonts/HelveticaNeue-Bold.ttf);
 }
 
+@font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(../fonts/Brandon_bld.otf);
+}
+
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url(../fonts/Brandon_reg.otf);
+}
+
+@font-face {
+    font-family: "Brandon Grotesque Light";
+    src: url(../fonts/Brandon_light.otf);
+}
+
+
 /*****************************
 ELEMENTS
 ******************************/
@@ -53,7 +69,7 @@ ELEMENTS
 
 #large-header {
   z-index: 0;
-  font-family: 'Brandon Grotesque';
+  font-family: "Brandon Grotesque";
 }
 
 #mentor-button, #apply-button{
@@ -111,7 +127,7 @@ ELEMENTS
 .buttons button{
   outline: none;
   font-size: 20px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Light';
   font-weight:lighter;
   border-radius:3px;
   border: 1px solid #fff;
