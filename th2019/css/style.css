@@ -32,6 +32,15 @@ FONTS
     src: url(../fonts/Brandon_light.otf);
 }
 
+@font-face {
+    font-family: "Clear Sans";
+    src: url(../fonts/ClearSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Clear Sans Light";
+    src: url(../fonts/ClearSans-Light.ttf);
+}
 
 /*****************************
 ELEMENTS
