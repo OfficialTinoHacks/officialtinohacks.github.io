@@ -42,6 +42,11 @@ FONTS
     src: url(../fonts/ClearSans-Light.ttf);
 }
 
+@font-face {
+    font-family: "Clear Sans Thin";
+    src: url(../fonts/ClearSans-Thin.ttf);
+}
+
 /*****************************
 ELEMENTS
 ******************************/
