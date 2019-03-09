@@ -62,6 +62,12 @@ FONTS
     src: url(../fonts/ProximaNova-Regular.otf);
 }
 
+@font-face {
+    font-family: "Didact Gothic";
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+
 
 
 /*****************************
@@ -83,7 +89,7 @@ ELEMENTS
 
 #mission-title{
   /* TEAMWORK: */
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 25px;
   color: #4B4B4B;
 
@@ -93,7 +99,7 @@ ELEMENTS
 
 
 #mission-body{
-font-family: ProximaNovaT-Thin;
+font-family: "ProximaNovaT-Thin";
 font-size: 15px;
 color: #484545;
 margin-left: auto;
@@ -131,7 +137,7 @@ width: 80%;
 }
 
 #faq {
-  font-family: ProximaNovaT-Thin;
+  font-family: "ProximaNovaT-Thin";
   z-index: -1;
 
   background-color:white;
@@ -139,7 +145,7 @@ width: 80%;
 }
 
 #faq h1{
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 40px;
   color: #505050;
 }
@@ -151,7 +157,7 @@ width: 80%;
 }
 
 #sponsors strong{
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 40px;
   color: #505050;
   /*  Old browsers
@@ -163,14 +169,14 @@ width: 80%;
 
 
 #sponsors p{
-  font-family: ProximaNovaT-Thin;
+  font-family: "ProximaNovaT-Thin";
   color: #505050;
   font-size: 20px;
 
 }
 
 #sponsors h3{
-  font-family: ProximaNovaT-Thin;
+  font-family: "ProximaNovaT-Thin";
   color: #505050;
   font-size: 30px;
 
@@ -184,7 +190,7 @@ width: 80%;
 }
 
 #partners h1, h2{
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 40px;
   color: #505050;
 }
@@ -199,7 +205,7 @@ width: 80%;
 }
 
 #footer h1{
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 40px;
    color: #505050;
 }
@@ -257,7 +263,7 @@ width: 80%;
 
 
 #team h1{
-  font-family: ProximaNova-Extrabld;
+  font-family: "ProximaNova-Extrabld";
   font-size: 20px;
   color: #505050;
   line-height : 15px;
@@ -265,7 +271,7 @@ width: 80%;
 }
 
 #team p{
-  font-family: ProximaNovaT-Thin;
+  font-family: "ProximaNovaT-Thin";
   font-size: 13px;
 
   color: #4B4B4B;
@@ -441,7 +447,6 @@ width: 80%;
 body, html {
     height: 100%;
     margin: 0;
-    font-family: Didact Gothic, sans-serif;
     font-weight: 200;
     font-size: 1em;
     color: #777;
@@ -620,7 +625,7 @@ HEADER
 
 .info-section2{
   width:80%;
-  margin: 40px auto 500px; auto;
+  margin: 40px auto 450px; auto;
 }
 
 .info-header2{
@@ -945,6 +950,12 @@ a {
 
 #footer h3{
   font-family: ProximaNovaT-Thin;
+}
+
+#footer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .content>img {
