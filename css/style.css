@@ -574,7 +574,9 @@ HEADER
 
 .info-section{
   width:80%;
-  margin: 50px auto 450px; auto;
+  margin: 50px auto auto auto;
+  vertical-align: middle;
+  height: 300px;
 
 }
 
@@ -594,14 +596,14 @@ HEADER
 .info-header h1{
 
   font-family: ProximaNova-Extrabld;
-  font-size: 38px;
+  font-size: 33px;
   color: #505050;
 
 }
 
 .info-header p{
   font-family: ProximaNovaT-Thin;
-  font-size: 23px;
+  font-size: 20px;
   color: #505050;
 
 }
@@ -620,12 +622,13 @@ HEADER
   border-radius: 10px;
   box-shadow: 0 0 76px 14px rgba(160,160,160,0.50);
 
-
 }
 
 .info-section2{
   width:80%;
-  margin: 40px auto 450px; auto;
+  margin: 40px auto auto auto;
+  height: 300px;
+  vertical-align: middle;
 }
 
 .info-header2{
@@ -637,14 +640,14 @@ HEADER
 .info-header2 h1{
 
   font-family: ProximaNova-Extrabld;
-  font-size: 38px;
+  font-size: 33px;
   color: #505050;
 
 }
 
 .info-header2 p{
   font-family: ProximaNovaT-Thin;
-  font-size: 23px;
+  font-size: 20px;
   color: #505050;
 }
 
