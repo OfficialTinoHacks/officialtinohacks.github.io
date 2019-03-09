@@ -22,7 +22,11 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 }
 
 .stars {
-  background: url(../img/bgimages/firstpagegradient.png);
+  /*background: url(../img/bgimages/firstpagegradient.png);*/
+  background:
+    linear-gradient(0deg, #FFFFFF 0%, rgba(255,255,255,0.00) 60%),
+    linear-gradient(80deg, #945FD3 17%, #42C8D5 100%);
   background-size: cover;
+
   z-index: 0;
 }

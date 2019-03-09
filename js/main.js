@@ -53,4 +53,17 @@ $(document).ready(function () {
         });
     }
 
+    $(".learn-more").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#whoarewe").offset().top},
+        'slow');
+      });
+
+      $('.collapsed').click(function() {
+        console.log("open")
+      $('.panel-heading').css({
+          'border-radius': '10px 10px 0px 0px'
+
+      });
+  });
 });
